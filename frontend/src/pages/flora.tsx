@@ -84,9 +84,10 @@ const Flora = () => {
           </div>
         </div>
       </div>
+
         {/* Species Count */}
       <div>
-        <div className="mt-16 flex gap-10 min-h-[600px] items-center justify-center w-screen"
+        <div className="mt-16 px-5 flex gap-10 min-h-[600px] flex-col lg:flex-row items-center justify-center w-screen"
           style={{
             backgroundImage: 'url("./numbersbg.svg")',
             backgroundSize: 'cover',
@@ -102,7 +103,7 @@ const Flora = () => {
             </p>
           </div>
 
-          <div className=" mt-4 grid grid-cols-2 md:grid-cols-3 gap-2">
+          <div className=" mt-4 grid grid-cols-3 gap-2">
             {speciesCounts.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-yellow-700 mb-2">{item.count}</div>
@@ -112,6 +113,7 @@ const Flora = () => {
           </div>
         </div>
       </div>
+
         {/* Fauna Gallery */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="mt-24">

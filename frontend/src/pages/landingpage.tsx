@@ -10,17 +10,21 @@ import SpeciesOfWeek from "@/components/landing/species"
 const LandingPage = () => {
   return (
     <div>
-      <img src="./bgtexture.svg" className="repeat-infinite w-full absolute -z-20"/>
-        <div className="min-h-screen w-full">
+      <div className="min-h-screen w-full">
+        <div
+          className="min-h-screen w-full bg-cover bg-repeat"
+          style={{ backgroundImage: "url('/bgtexture.svg')" }}
+        >
           <HeroSection />
           <Numbers />
-          <AnimalImages />
-          <SpeciesOfWeek />
-          <CardInfo />
-          <UpcomingEvents />
-          <ContactForm />
-          <Footer />
         </div>
+        <AnimalImages />
+        <SpeciesOfWeek />
+        <CardInfo />
+        <UpcomingEvents />
+        <ContactForm />
+        <Footer />
+      </div>
     </div>
   )
 }

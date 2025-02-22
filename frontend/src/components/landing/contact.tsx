@@ -7,7 +7,7 @@ const ContactForm = () => {
         <div className="max-w-4xl">
           <h2 className="text-3xl font-bold text-white mb-8">Contact Us</h2>
           
-          <div className="grid grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             <div className="flex flex-col text-white">
               <MapPin className="w-8 h-8 mr-2 mb-4" />
               <div>
@@ -62,7 +62,7 @@ const ContactForm = () => {
           <img
             src="./tiger.png"
             alt="Tiger"
-            className="h-full w-full object-cover"
+            className="hidden lg:block h-full w-full object-cover"
           />
         </div>
       </div>

@@ -3,9 +3,9 @@ import { Camera, Facebook, Instagram, Twitter } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-black text-white p-8 py-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-4 gap-8">
-        <div>
-          <img src="./logo.png" height={50} width={50} alt="Logo" className="mb-4" />
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className='text-center md:text-left'>
+          <img src="./logo.png" height={50} width={50} alt="Logo" className="mb-4 mx-auto md:mx-0" />
           <h3 className="text-xl font-bold mb-4">Namdapha Tiger Reserve</h3>
           <p className="mb-2">Phone: 0000000000</p>
           <p className="mb-4">Email: fdnamdapha@gmail.com</p>
@@ -15,15 +15,15 @@ const Footer = () => {
             Miao, Arunachal Pradesh
           </p>
           
-          <div className="flex gap-4 mt-4">
+            <div className="flex justify-center md:justify-start gap-4 mt-4">
             <Facebook className="w-5 h-5 cursor-pointer hover:text-gray-300" />
             <Instagram className="w-5 h-5 cursor-pointer hover:text-gray-300" />
             <Twitter className="w-5 h-5 cursor-pointer hover:text-gray-300" />
             <Camera className="w-5 h-5 cursor-pointer hover:text-gray-300" />
-          </div>
+            </div>
         </div>
 
-        <div>
+        <div className='text-center md:text-left'>
           <h4 className="text-yellow-500 font-bold mb-4">Quick Links</h4>
           <ul className="space-y-2">
             {['Home', 'Wildlife', 'Tourism', 'Act & Rules', 'Budget', 'News', 'About Us'].map((link) => (
@@ -34,7 +34,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div>
+        <div className='text-center md:text-left'> 
           <h4 className="text-yellow-500 font-bold mb-4">Important Links</h4>
           <ul className="space-y-2">
             {['Home', 'Wildlife', 'Tourism', 'Act & Rules', 'Budget', 'News', 'About Us'].map((link) => (

@@ -16,7 +16,7 @@ const CardInfo = () => {
         <img src="pattern3.svg" className='absolute left-[60vw]' alt="Butterfly or Moth" />
       </div>
       <div className="py-14">
-        <div className="grid grid-cols-4 gap-10 px-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-10 xl:px-40">
           {actions.map((action, index) => (
             <div key={index} className="z-10 bg-white rounded-xl p-6 py-10 flex flex-col items-center shadow-lg border-[#467837] border-4">
               {action.icon}
