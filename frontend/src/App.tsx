@@ -17,10 +17,12 @@ import Budget from './pages/budget'
 import AboutUs from './pages/aboutus'
 import ErrorPage from './pages/errorpage'
 import Footer from './components/footer'
+import ScrollToTop from './ScrollToTop'
 
 const App = () => {
   return (
     <Router>
+        <ScrollToTop />
         <Navbar />
         <div className='transition-colors duration-300 font-sans'>
           <Routes>
