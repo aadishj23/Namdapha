@@ -1,5 +1,4 @@
 import { Button } from "../components/ui/button";
-import { PlayCircleIcon } from "lucide-react";
 
 interface SpeciesCount {
   category: string;
@@ -51,23 +50,18 @@ const Flora = () => {
           backgroundPosition: 'center',
         }}
       >
-        {/* <div className="absolute inset-0 bg-black/40" /> */}
+
         <div className="relative z-10 text-center text-white">
           <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">FLORA</h1>
         </div>
       </div>
 
-      {/* Video Section */}
-      {/* <div className="relative">
-        <div className="absolute w-full h-32 bg-white"/>
-      </div> */}
-
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 md:gap-10 items-center">
           <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
           <div className="w-full md:w-1/2 pr-0 md:pr-4 relative">
             <iframe
-              className="sm:w-[420px] sm:h-[236px] xl:w-[560px] xl:h-[315px] rounded-md"
+              className="sm:w-[420px] sm:h-[236px] xl:w-[560px] xl:h-[315px] rounded-md mx-auto"
               src="https://www.youtube.com/embed/AbTVMGuXP_s"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -79,9 +73,7 @@ const Flora = () => {
               }}
             ></iframe>
           </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <PlayCircleIcon className="w-16 h-16 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
-            </div>
+
           </div>
           <div>
             <p className="text-gray-600 mb-6">
@@ -96,7 +88,7 @@ const Flora = () => {
 
         {/* Species Count */}
       <div>
-        <div className="mt-16 px-5 flex gap-10 min-h-[600px] flex-col lg:flex-row items-center justify-center w-screen"
+        <div className="mt-5 md:mt-16 px-5 flex gap-10 min-h-[600px] flex-col lg:flex-row items-center justify-center w-screen"
           style={{
             backgroundImage: 'url("./numbersbg.svg")',
             backgroundSize: 'cover',

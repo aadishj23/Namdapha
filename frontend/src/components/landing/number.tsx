@@ -14,7 +14,7 @@ const Numbers = () => {
       </h1>
 
       {/* Image & Text Section */}
-      <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center justify-center mb-8">
+      <div className="mt-5 md:mt-10 lg:mt-20 flex flex-col md:flex-row items-center justify-center mb-8">
         <div className="w-full md:w-1/2 pr-0 md:pr-4 relative flex justify-center">
           <iframe
             className="sm:w-[420px] sm:h-[236px] xl:w-[560px] xl:h-[315px] rounded-md"
