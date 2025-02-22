@@ -24,25 +24,25 @@ function Donation() {
         {/*Why Donate Section*/}
       <h1 className="text-[#569343] font-bold text-2xl text-center mb-10">Why Donate?</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mb-10">
-        <div >
+        <div className="mb-3" >
           <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Why Conservation</h2>
-          <p className="mt-4 w-4/5 mx-auto font-thin">Help protect endangered species like the Red Panda, Clouded Leopard, and Hoolock Gibbon.</p>
+          <p className="my-4 w-4/5 mx-auto font-thin">Help protect endangered species like the Red Panda, Clouded Leopard, and Hoolock Gibbon.</p>
         </div>
-        <div>
+        <div className="mb-3">
           <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Forest Preservation</h2>
-          <p className="mt-4 w-4/5 mx-auto font-thin">Support reforestation and anti-poaching efforts to maintain the rich biodiversity of Namdapha.</p>
+          <p className="my-4 w-4/5 mx-auto font-thin">Support reforestation and anti-poaching efforts to maintain the rich biodiversity of Namdapha.</p>
         </div>
-        <div>
+        <div className="mb-3">
           <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Community Empowerment</h2>
-          <p className="mt-4 w-4/5 mx-auto font-thin">Aid indigenous communities by promoting eco-friendly livelihoods and education.</p>
+          <p className="my-4 w-4/5 mx-auto font-thin">Aid indigenous communities by promoting eco-friendly livelihoods and education.</p>
         </div>
-        <div>
+        <div className="mb-3">
           <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Research & Awareness</h2>
-          <p className="mt-4 w-4/5 mx-auto font-thin">Fund scientific research and awareness programs to foster sustainable conservation.</p>
+          <p className="my-4 w-4/5 mx-auto font-thin">Fund scientific research and awareness programs to foster sustainable conservation.</p>
         </div>
       </div>
 
@@ -96,7 +96,7 @@ function Donation() {
             </div>
         </div>
         <p className="font-bold text-xl text-center">For any donation-related inquiries, feel free to reach out to us at:</p>
-        <p className="text-center"><b>Email: </b>frnamdapha@gmail.com</p>
+        <p className="text-center"><b>Email: </b>fdnamdapha@gmail.com</p>
       </div>
     </div>
   )
