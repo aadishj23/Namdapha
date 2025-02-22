@@ -7,6 +7,15 @@ import Gallery from './pages/gallery'
 import Navbar from './components/navbar'
 import Donation from './pages/donation'
 import Flora from './pages/flora'
+import Packages from './pages/packages'
+import Accommodations from './pages/accomodations'
+import Safari from './pages/safari'
+import Trekking from './pages/trekking'
+import Guidelines from './pages/guidelines'
+import Regulations from './pages/regulations'
+import Budget from './pages/budget'
+import AboutUs from './pages/aboutus'
+import ErrorPage from './pages/errorpage'
 
 const App = () => {
   return (
@@ -16,11 +25,20 @@ const App = () => {
             <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/news' element={<News />} />
+            <Route path='/flora' element={<Flora />} />
             <Route path='/fauna' element={<Fauna />} />
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/donation' element={<Donation />} />
-            <Route path='/flora' element={<Flora />} />
+            <Route path='/packages' element={<Packages />} />
+            <Route path='/accommodations' element={<Accommodations />} />
+            <Route path='/safari' element={<Safari />} />
+            <Route path='/trekking' element={<Trekking />} />
+            <Route path='/guidelines' element={<Guidelines />} />
+            <Route path='/regulations' element={<Regulations />} />
+            <Route path='/budget' element={<Budget />} />
+            <Route path='/about' element={<AboutUs />} />
+            <Route path='*' element={<ErrorPage />} />
           </Routes>
         </div>
     </Router>
