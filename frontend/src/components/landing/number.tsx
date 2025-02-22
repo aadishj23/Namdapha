@@ -1,6 +1,6 @@
 const Numbers = () => {
   return (
-    <div className='px-auto p-8 flex flex-col gap-5 py-24'>
+    <div className='px-auto p-8 flex flex-col gap-5 py-24 mt-40'>
       <h1 className="text-3xl font-bold self-center max-w-md text-center text-white">ENJOY THE THRILL OF BEING NEAR TO NATURE</h1>
 
       <div className="flex items-center mb-8">

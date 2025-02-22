@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   return (
     <div className="relative h-screen">
       <div 
-        className="absolute inset-0 h-full"
+        className="absolute inset-0 min-h-[900px] "
         style={{
           backgroundImage: `url('./heroimage.svg')`,
           backgroundSize: 'cover',
@@ -10,10 +12,10 @@ const HeroSection = () => {
         }}
       />
       
-      <div className="relative h-full flex flex-col items-center justify-center text-white text-center px-4">
-        <p className="text-lg mb-4">DISCOVER THE NATURAL OF</p>
+      <div className="relative h-full flex flex-col items-center justify-center text-white text-center px-4 pt-28">
+        <p className="text-xl mb-4">DISCOVER THE NATURAL OF</p>
         
-        <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">
+        <h1 className="text-8xl font-extrabold mb-4 text-[#F1AA39]">
           NAMDAPHA
         </h1>
         
@@ -22,13 +24,15 @@ const HeroSection = () => {
           Endangered Wildlife
         </p>
         
-        <div className="flex gap-4">
+        <div className="flex gap-4 ">
           <button className="bg-[#F1AA39] text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition-colors">
             Read More
           </button>
-          <button className="bg-transparent border border-white px-6 py-2 rounded-xl hover:bg-white/10 transition-colors">
-            Donate Now
-          </button>
+          <Link to='/donation'>
+            <button className="bg-transparent border border-white px-6 py-2 rounded-xl hover:bg-white/10 transition-colors">
+              Donate Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

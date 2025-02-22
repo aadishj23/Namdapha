@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import { PlayCircleIcon } from "lucide-react";
 
 interface SpeciesCount {
@@ -25,7 +25,7 @@ const speciesCounts: SpeciesCount[] = [
 const faunaItems: FaunaItem[] = [
   {
     name: "Tecca Sp",
-    image: "https://images.unsplash.com/photo-1615477081663-8c063c8d9dab?q=80&w=2070&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
   },
   {
     name: "Aconitum napellus",
@@ -33,7 +33,7 @@ const faunaItems: FaunaItem[] = [
   },
   {
     name: "Esmeralda",
-    image: "https://images.unsplash.com/photo-1551957402-71bc97e17340?q=80&w=2071&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
   },
   {
     name: "Tecca Sp",
@@ -46,14 +46,14 @@ const Fauna = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div 
-        className="h-[400px] relative flex items-center justify-center"
+        className="min-h-[600px] relative flex items-center justify-center"
         style={{
           backgroundImage: 'url("./flowerbanner.png")',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-black/40" />
+        {/* <div className="absolute inset-0 bg-black/40" /> */}
         <div className="relative z-10 text-center text-white">
           <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">FAUNA</h1>
         </div>
@@ -88,29 +88,37 @@ const Fauna = () => {
             </p>
           </div>
         </div>
-
+      </div>
         {/* Species Count */}
-        <div className="mt-24 flex gap-10">
+      <div>
+        <div className="mt-16 flex gap-10 min-h-[600px] items-center justify-center w-screen"
+          style={{
+            backgroundImage: 'url("./numbersbg.svg")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}>
           <div>
             <h2 className="text-3xl font-bold mb-2 text-amber-500">Species Recorded</h2>
-            <h3 className="text-2xl font-bold mb-8 underline decoration-amber-500">in Namdapha</h3>
+            <h2 className="text-3xl font-bold mb-2 text-amber-500">in Namdapha</h2>
+            {/* <h3 className="text-2xl font-bold mb-8 decoration-amber-500">in Namdapha</h3> */}
             
-            <p className="text-gray-600 max-w-xl">
+            <p className="text-white max-w-xl">
               Total 91 genera and 137 species of Mammals are found in Namdapha National Park, out of which 02 are Critically Endangered, 12 species are Endangered, 06 species are Near Threatened, 22 species are Vulnerable, 87 species are Least Concerned and 08 are Data Deficient and 01 species is Not Assessed as per the IUCN Red List.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          <div className=" mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
             {speciesCounts.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-yellow-700 mb-2">{item.count}</div>
-                <div className="text-gray-600">{item.category}</div>
+                <div className="text-white">{item.category}</div>
               </div>
             ))}
           </div>
         </div>
-
+      </div>
         {/* Fauna Gallery */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="mt-24">
           <h2 className="text-3xl font-bold mb-12 text-center text-[#569343]">Fauna in Namdapha</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

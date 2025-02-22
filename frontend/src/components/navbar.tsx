@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -6,8 +6,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
+} from "./ui/navigation-menu";
+import { cn } from "../lib/utils";
+import { Link } from "react-router-dom";
 
 // Define interface for navigation items
 interface NavItem {
@@ -62,15 +63,19 @@ const Navbar = () => {
         <div className="flex justify-between">
           <div></div>
           <div className="space-x-4">
-            <Button className="bg-yellow-500 hover:bg-yellow-600 ">
-              Safari Booking
-            </Button>
-            <Button variant="outline" className="text-black">
-              Donate Now
-            </Button>
+            <Link to='/booking'>
+              <Button className="bg-yellow-500 hover:bg-yellow-600 ">
+                Safari Booking
+              </Button>
+            </Link>
+            <Link to='/donation'>
+              <Button variant="outline" className="text-black">
+                Donate Now
+              </Button>
+            </Link>
           </div>
         </div>
-        <hr className="h-px mt-2 bg-[#7a7a7aa3] border-0" />
+        <hr className="h-px mt-2 bg-[#7a7a7aa3] border-0 -mx-4" />
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
@@ -89,10 +94,10 @@ const Navbar = () => {
           <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               {navigationItems.map((item) => (
-                <NavigationMenuItem key={item.title}>
+                <NavigationMenuItem key={item.title} className="relative">
                   {item.children ? (
                     <>
-                      <NavigationMenuTrigger className="">
+                      <NavigationMenuTrigger className="px-4 py-2">
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="bg-transparent">
