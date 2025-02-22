@@ -12,31 +12,31 @@ const navigationItems: NavItem[] = [
   { title: "Home", href: "/" },
   {
     title: "Wildlife",
-    href: "/wildlife",
+    href: "/flora",
     children: [
-      { title: "Fauna", href: "/fauna" },
       { title: "Flora", href: "/flora" },
+      { title: "Fauna", href: "/fauna" },
     ],
   },
   {
     title: "Tourism",
-    href: "/tourism",
+    href: "/packages",
     children: [
-      { title: "Packages", href: "packages" },
-      { title: "Accommodations", href: "accommodations" },
+      { title: "Packages", href: "/packages" },
+      { title: "Accommodations", href: "/accommodations" },
     ],
   },
   {
     title: "Activities",
-    href: "/activities",
+    href: "/safari",
     children: [
-      { title: "Safari", href: "safari" },
-      { title: "Trekking", href: "trekking" },
+      { title: "Safari", href: "/safari" },
+      { title: "Trekking", href: "/trekking" },
     ],
   },
   {
     title: "Act & Rules",
-    href: "/act-rules",
+    href: "/guidelines",
     children: [
       { title: "Guidelines", href: "/guidelines" },
       { title: "Regulations", href: "/regulations" },

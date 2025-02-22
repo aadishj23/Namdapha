@@ -67,11 +67,20 @@ const Fauna = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
-            <img
-              src="./flower.svg"
-              alt="Fauna Video"
-              className="w-full h-full object-cover"
-            />
+          <div className="w-full md:w-1/2 pr-0 md:pr-4 relative">
+            <iframe
+              className="sm:w-[420px] sm:h-[236px] xl:w-[560px] xl:h-[315px] rounded-md"
+              src="https://www.youtube.com/embed/AbTVMGuXP_s"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded YouTube Video"
+              style={{ 
+                zIndex: 100, 
+                position: 'relative',
+              }}
+            ></iframe>
+          </div>
             <div className="absolute inset-0 flex items-center justify-center">
               <PlayCircleIcon className="w-16 h-16 text-white opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
             </div>

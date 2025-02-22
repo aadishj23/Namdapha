@@ -1,6 +1,5 @@
 import ContactForm from "@/components/landing/contact"
 import UpcomingEvents from "@/components/landing/events"
-import Footer from "@/components/landing/footer"
 import HeroSection from "@/components/landing/hero"
 import AnimalImages from "@/components/landing/images"
 import CardInfo from "@/components/landing/info"
@@ -23,7 +22,6 @@ const LandingPage = () => {
         <CardInfo />
         <UpcomingEvents />
         <ContactForm />
-        <Footer />
       </div>
     </div>
   )

@@ -16,13 +16,14 @@ import Regulations from './pages/regulations'
 import Budget from './pages/budget'
 import AboutUs from './pages/aboutus'
 import ErrorPage from './pages/errorpage'
+import Footer from './components/footer'
 
 const App = () => {
   return (
     <Router>
         <Navbar />
         <div className='transition-colors duration-300 font-sans'>
-            <Routes>
+          <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/news' element={<News />} />
             <Route path='/flora' element={<Flora />} />
@@ -41,6 +42,7 @@ const App = () => {
             <Route path='*' element={<ErrorPage />} />
           </Routes>
         </div>
+        <Footer />
     </Router>
   )
 }

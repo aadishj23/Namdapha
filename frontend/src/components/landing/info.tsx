@@ -1,12 +1,13 @@
+import { button } from 'framer-motion/client';
 import { Book, Heart, HelpCircle, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CardInfo = () => {
   const actions = [
-    { icon: <Book className="w-12 h-12 text-green-800" />, title: 'Upload Your Image' , href: '/gallery' },
-    { icon: <Heart className="w-12 h-12 text-green-800" />, title: 'Donate for us' , href: '/donation' },
-    { icon: <HelpCircle className="w-12 h-12 text-green-800" />, title: 'Enquiry Us' , href: '/contact-us' },
-    { icon: <MessageSquare className="w-12 h-12 text-green-800" />, title: 'Feedback' , href: '/contact-us' },
+    { icon: <Book className="w-12 h-12 text-green-800" />, title: 'Upload Your Image' , href: '/gallery' , buttontext: 'Upload Now' },
+    { icon: <Heart className="w-12 h-12 text-green-800" />, title: 'Donate for us' , href: '/donation' , buttontext: 'Donate Now' },
+    { icon: <HelpCircle className="w-12 h-12 text-green-800" />, title: 'Enquiry Us' , href: '/contact-us' , buttontext: 'Enquire Now' },
+    { icon: <MessageSquare className="w-12 h-12 text-green-800" />, title: 'Feedback' , href: '/contact-us' , buttontext: 'Submit Feedback'},
   ];
 
   return (
@@ -24,7 +25,7 @@ const CardInfo = () => {
               <h3 className="text-lg font-semibold my-4">{action.title}</h3>
               <Link to={action.href} className="text-green-800 font-bold hover:text-green-900 transition-colors">
               <button className="bg-orange-400 text-black px-6 py-1 font-bold rounded-xl hover:bg-orange-500 transition-colors">
-                Book Now
+                {action.buttontext}
               </button>
               </Link>
             </div>

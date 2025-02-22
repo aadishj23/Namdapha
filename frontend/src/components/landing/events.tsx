@@ -8,7 +8,7 @@ const UpcomingEvents = () => {
         Stay updated on conservation efforts, events, and activities at Namdapha.
       </p>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="col-span-1">
           <div className="rounded-lg overflow-hidden">
             <img
