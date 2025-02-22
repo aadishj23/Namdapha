@@ -1,4 +1,3 @@
-import { button } from 'framer-motion/client';
 import { Book, Heart, HelpCircle, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
