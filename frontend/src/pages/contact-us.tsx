@@ -7,22 +7,15 @@ const Contact = () => {
   return (
     <div className="bg-[#f5f1ee]">
       {/* Hero Section with Map Background */}
-      <img src='./contactimage.svg' className='absolute' />
-
-      {/* <div 
-        className="h-[100px] bg-green-900 relative flex items-center justify-center"
+      <div 
+        className="min-h-[650px] relative flex items-center justify-center"
         style={{
+          backgroundImage: 'url("./contactimage.svg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Connect with us</h1>
-          <p className="text-xl">Get in touch with the Namdapha Tiger Reserve team</p>
-        </div>
-      </div> */}
-      <div className="h-[600px]"></div>
+      </div>
 
       {/* Contact Form Section */}
       <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-16">

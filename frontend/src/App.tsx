@@ -13,7 +13,7 @@ const App = () => {
     <Router>
         <Navbar />
         <div className='transition-colors duration-300 font-sans'>
-          <Routes>
+            <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/news' element={<News />} />
             <Route path='/fauna' element={<Fauna />} />

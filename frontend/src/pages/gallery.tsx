@@ -45,14 +45,14 @@ const Gallery = () => {
     <div className="">
       {/* Hero Section */}
       <div 
-        className="h-[400px] relative flex items-center justify-center"
+        className="min-h-[600px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1543946207-39bd91e70ca7?q=80&w=1974&auto=format&fit=crop")',
+          backgroundImage: 'url("./flowerbanner.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        {/* <div className="absolute inset-0 bg-black/60" /> */}
         <div className="relative z-10 text-center text-white">
           <h1 className="text-7xl font-bold mb-4 text-amber-400">Namdapha Gallery</h1>
         </div>
