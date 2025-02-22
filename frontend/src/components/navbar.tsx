@@ -56,21 +56,25 @@ const Navbar = () => {
     setDropdownOpen((prev) => ({ ...prev, [title]: !prev[title] }));
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="w-full bg-transparent absolute text-white z-[100] px-4 pt-4">
       {/* Action Buttons */}
       <div className="flex justify-end space-x-4">
-        <Link to='/booking'>
+        <Link to='/booking' onClick={closeMenu}>
           <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">Safari Booking</button>
         </Link>
-        <Link to='/donation'>
+        <Link to='/donation' onClick={closeMenu}>
           <button className="border border-white text-white px-4 py-2 rounded">Donate Now</button>
         </Link>
       </div>
       
       <hr className="h-px mt-2 bg-[#7a7a7aa3] border-0 -mx-4" />
       
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex justify-between items-center mt-4 relative">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img src="./logo.png" alt="Logo" className="h-12 w-12 rounded-full bg-white" />
@@ -81,13 +85,13 @@ const Navbar = () => {
         <div className="hidden lg:flex space-x-6">
           {navigationItems.map((item) => (
             <div key={item.title} className="relative group">
-              <Link to={item.href} className="px-4 py-2 flex items-center hover:text-yellow-500">
+              <Link to={item.href} className="px-4 py-2 flex items-center hover:text-yellow-500" onClick={closeMenu}>
                 {item.title} {item.children && <FiChevronDown className="ml-1 transition-transform group-hover:rotate-180" />}
               </Link>
               {item.children && (
                 <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {item.children.map((child) => (
-                    <Link key={child.title} to={child.href} className="block px-4 py-2 hover:bg-gray-100">
+                    <Link key={child.title} to={child.href} className="block px-4 py-2 hover:bg-gray-100" onClick={closeMenu}>
                       {child.title}
                     </Link>
                   ))}
@@ -98,33 +102,34 @@ const Navbar = () => {
         </div>
         
         {/* Mobile Menu Button */}
-        <button className="lg:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FiX /> : <FiMenu />}
+        <button className={`lg:hidden text-2xl z-[101] ${menuOpen ? 'hidden' : 'block'}`} onClick={() => setMenuOpen(true)}>
+          <FiMenu />
         </button>
       </div>
       
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="lg:hidden flex flex-col bg-black bg-opacity-90 absolute w-full left-0 top-16 text-white p-4 space-y-4">
-          {navigationItems.map((item) => (
-            <div key={item.title} className="relative">
-              <div className="flex justify-between items-center py-2 text-lg" onClick={() => toggleDropdown(item.title)}>
-                <Link to={item.href}>{item.title}</Link>
-                {item.children && <FiChevronDown className={`ml-2 transition-transform ${dropdownOpen[item.title] ? "rotate-180" : "rotate-0"}`} />}
-              </div>
-              {item.children && dropdownOpen[item.title] && (
-                <div className="ml-4 border-l border-gray-500 pl-4 transition-all duration-300">
-                  {item.children.map((child) => (
-                    <Link key={child.title} to={child.href} className="block py-1 text-sm hover:text-yellow-500">
-                      {child.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
+      <div className={`lg:hidden fixed inset-0 bg-black bg-opacity-90 text-white p-4 space-y-4 transform ${menuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 z-[100]`}> 
+        <button className="absolute top-4 right-4 text-2xl" onClick={closeMenu}>
+          <FiX />
+        </button>
+        {navigationItems.map((item) => (
+          <div key={item.title} className="relative">
+            <div className="flex justify-between items-center py-2 text-lg" onClick={() => toggleDropdown(item.title)}>
+              <Link to={item.href} onClick={closeMenu}>{item.title}</Link>
+              {item.children && <FiChevronDown className={`ml-2 transition-transform ${dropdownOpen[item.title] ? "rotate-180" : "rotate-0"}`} />}
             </div>
-          ))}
-        </div>
-      )}
+            {item.children && dropdownOpen[item.title] && (
+              <div className="ml-4 border-l border-gray-500 pl-4 transition-all duration-300">
+                {item.children.map((child) => (
+                  <Link key={child.title} to={child.href} className="block py-1 text-sm hover:text-yellow-500" onClick={closeMenu}>
+                    {child.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </nav>
   );
 };
