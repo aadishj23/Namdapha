@@ -13,7 +13,7 @@ const LandingPage = () => {
       <div className="min-h-screen w-full">
         <div
           className="min-h-screen w-full bg-cover bg-repeat"
-          style={{ backgroundImage: "url('/bgtexture.svg')" }}
+          style={{ backgroundImage: "url('/bgtexture.png')" }}
         >
           <HeroSection />
           <Numbers />

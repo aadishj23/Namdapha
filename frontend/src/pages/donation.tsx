@@ -11,7 +11,7 @@ function Donation() {
     AOS.init({ duration: 1000, once: true }); 
   }, []);
   return (
-    <div className="min-h-screen bg-[#F5F1EE]" data-aos='zoom-out'>
+    <div className="min-h-screen bg-[#F5F1EE] pb-20" data-aos='zoom-out'>
       {/* Hero Section */}
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
@@ -54,7 +54,7 @@ function Donation() {
       </div>
 
         {/*Donation Form*/}
-        <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-white py-10 rounded-lg mb-20" data-aos='fade-up'>
+        <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-white py-10 rounded-lg" data-aos='fade-up'>
           <h1 className="text-[#569343] font-bold text-2xl text-left mb-2 ">Make a Difference Today!</h1>
           <p>Your donation helps preserve Namdapha's wildlife and forests for future generations. </p>
           <p className="mb-5">Thank you for your support!</p>
