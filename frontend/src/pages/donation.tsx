@@ -54,27 +54,28 @@ function Donation() {
       </div>
 
         {/*Donation Form*/}
-        <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-white py-10 rounded-lg" data-aos='fade-up'>
+        <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-white py-10 rounded-lg mb-20" data-aos='fade-up'>
           <h1 className="text-[#569343] font-bold text-2xl text-left mb-2 ">Make a Difference Today!</h1>
-          <p>Your donation helps preserve Namdapha’s wildlife and forests for future generations. Thank you for your support!</p>
+          <p>Your donation helps preserve Namdapha's wildlife and forests for future generations. </p>
+          <p className="mb-5">Thank you for your support!</p>
           <img 
             src="help.png" 
             alt="helping hands" 
             className="hidden md:block absolute w-[150px] top-2 right-5 md:w-[200px] z-50"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">  
-            <form className="space-y-4">
+          <div className="flex flex-col lg:flex-row my-5">  
+            <form className="space-y-4 w-full lg:w-2/5 mx-2 lg:mx-10">
               <div>
-                <Input placeholder="Name" className="focus-visible:ring-0 focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
+                <Input placeholder="Name" className="focus-visible:ring-0 border-[#395903] focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
               </div>
               <div>
-                <Input type="email" placeholder="Email" className="focus-visible:ring-0 focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
+                <Input type="email" placeholder="Email" className="focus-visible:ring-0 border-[#395903] focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
               </div>
               <div>
-                <Input type="country" placeholder="Country" className="focus-visible:ring-0 focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
+                <Input type="country" placeholder="Country" className="focus-visible:ring-0 border-[#395903] focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
               </div>
               <div>
-                <Input type="amount" placeholder="Enter Amount" className="focus-visible:ring-0 focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
+                <Input type="amount" placeholder="Enter Amount" className="focus-visible:ring-0 border-[#395903] focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
               </div>
               <input 
                 type="radio"
@@ -89,7 +90,10 @@ function Donation() {
               </div>
             </form>
 
-            <div>
+            <hr className="h-px bg-[#7a7a7aa3] border-0 block lg:hidden mt-5" />
+            <div className="h border-l border-gray-400 "></div>
+
+            <div className="mt-5 lg:mt-0 w-full lg:w-2/5 mx-2 lg:mx-10">
               <h2 className="font-bold"> Direct Bank Transfer </h2>
               <p>You can also donate directly to our bank account using the details below:</p>
               <hr className="h-px my-2 bg-[#7a7a7aa3] border-0 " />
@@ -102,7 +106,7 @@ function Donation() {
               <p>GSTIN : <b>12SHLO00008B2DL</b></p>
             </div>
         </div>
-        <p className="font-bold text-xl text-center">For any donation-related inquiries, feel free to reach out to us at:</p>
+        <p className="font-bold text-xl text-center mt-10">For any donation-related inquiries, feel free to reach out to us at:</p>
         <p className="text-center"><b>Email: </b>fdnamdapha@gmail.com</p>
       </div>
     </div>
