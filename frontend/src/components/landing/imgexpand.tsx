@@ -39,7 +39,7 @@ const HoverExpandGallery: React.FC = () => {
             <h1 className="text-[#F1AA39] text-3xl pt-10 md:pt-16 md:pl-10 text-center md:text-left">Our Animals</h1>
             <button className="text-white border px-4 py-1 rounded-2xl mt-5 md:mt-16 md:mr-10">Explore Animal Videos</button>
         </div>
-    <div className="flex gap-2 justify-center items-center p-5  w-full overflow-x-auto" data-aos="fade-up-right">
+    <div className="flex gap-2 justify-center items-center p-5  w-full overflow-x-auto" data-aos="fade-up-left">
       {images.map((img, index) => (
         <motion.div
           key={index}

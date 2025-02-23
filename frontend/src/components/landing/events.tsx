@@ -10,7 +10,7 @@ const UpcomingEvents = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto p-8 py-20" data-aos='zoom-in-left'>
+    <div className="max-w-6xl mx-auto p-8 py-20" data-aos='zoom-in-right'>
       <h1 className="text-4xl font-bold text-center mb-2 text-[#3A3A3A] ">Upcoming Events</h1>
       <p className="text-center text-[#3A3A3A] mb-8">
         Stay updated on conservation efforts, events, and activities at Namdapha.
