@@ -2,10 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
   return (
-    <div className="bg-[#f5f1ee]">
+    <div className="bg-[#f5f1ee]" data-aos='zoom-out'>
       {/* Hero Section with Map Background */}
       <div 
         className="min-h-[300px] lg:min-h-[650px] relative flex items-center justify-center"
@@ -18,7 +25,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-16" data-aos='fade-up'>
         <div>
           <h2 className="text-3xl font-bold mb-8">Contact Information</h2>
           
@@ -54,7 +61,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-md">
+        <div className="bg-white p-5 rounded-md" data-aos='fade-up'>
           <h2 className="text-3xl font-bold mb-4">Write to us</h2>
           <p className="text-gray-600 mb-4">We are here to answer your questions.</p>
           

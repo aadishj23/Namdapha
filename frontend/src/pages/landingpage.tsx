@@ -5,6 +5,7 @@ import AnimalImages from "@/components/landing/images"
 import CardInfo from "@/components/landing/info"
 import Numbers from "@/components/landing/number"
 import SpeciesOfWeek from "@/components/landing/species"
+import HoverExpandGallery from "@/components/landing/imgexpand"
 
 const LandingPage = () => {
   return (
@@ -21,6 +22,7 @@ const LandingPage = () => {
         <SpeciesOfWeek />
         <CardInfo />
         <UpcomingEvents />
+        <HoverExpandGallery />
         <ContactForm />
       </div>
     </div>

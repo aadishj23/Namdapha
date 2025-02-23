@@ -77,7 +77,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center mt-4 relative">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <img src="./logo.png" alt="Logo" className="h-12 w-12 rounded-full bg-white" />
+          <Link to='/'><img src="./logo.png" alt="Logo" className="h-12 w-12 rounded-full bg-white" /></Link>
           <h1 className="font-semibold text-md">Namdapha Tiger Reserve</h1>
         </div>
         

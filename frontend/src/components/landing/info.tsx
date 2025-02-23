@@ -1,5 +1,8 @@
 import { Book, Heart, HelpCircle, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const CardInfo = () => {
   const actions = [
@@ -9,8 +12,12 @@ const CardInfo = () => {
     { icon: <MessageSquare className="w-12 h-12 text-green-800" />, title: 'Feedback' , href: '/contact-us' , buttontext: 'Submit Feedback'},
   ];
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className='py-2 justify-center bg-[#569343]'>
+    <div className='py-2 justify-center bg-[#569343]' data-aos='fade-up-left'>
       <div className='relative gap-10'>
         <img src="pattern1.svg" className='absolute left-[0vw]' alt="Butterfly or Moth" />
         <img src="pattern2.svg" className='absolute left-[30vw]' alt="Butterfly or Moth" />

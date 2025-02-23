@@ -1,4 +1,22 @@
+import { Carousel} from "../ui/apple-cards-carousel";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const imageItems = [
+  "animal1.png",
+  "animal2.png",
+  "animal2.png",
+  "animal3.png",
+  "animal4.png",
+];
+
 const AnimalImages = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
     <div 
       className="min-h-[700px] relative flex items-center justify-center -mt-4"
@@ -8,11 +26,8 @@ const AnimalImages = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 w-full">
-        <img src="animal1.png" alt="animal1" className="block w-full" />
-        <img src="animal2.png" alt="animal2" className="block w-full" />
-        <img src="animal3.png" alt="animal3" className="block w-full" />
-        <img src="animal4.png" alt="animal4" className="block w-full" />
+      <div className="w-full h-full py-20" data-aos='zoom-in-left'>
+        <Carousel items={imageItems} />
       </div>
     </div>
   );

@@ -1,10 +1,17 @@
 // import React from 'react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Donation() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F5F1EE]" data-aos='zoom-out'>
       {/* Hero Section */}
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
@@ -15,7 +22,7 @@ function Donation() {
         }}
       >
         {/* <div className="absolute inset-0 bg-black/40" /> */}
-        <div className="relative z-10 text-center text-white">
+        <div className="relative z-10 text-center text-white" data-aos='fade-up'>
           <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">Support Namdapha</h1>
           <p className="w-full md:w-3/5 text-center px-3 md:mx-auto">Namdapha National Park is a treasure trove of biodiversity, home to rare and endangered species. Your generous contribution helps us protect this incredible ecosystem, conserve wildlife, and support local communities in sustainable living.</p>
         </div>
@@ -23,7 +30,7 @@ function Donation() {
 
         {/*Why Donate Section*/}
       <h1 className="text-[#569343] font-bold text-2xl text-center mb-10">Why Donate?</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mb-10" data-aos='fade-up'>
         <div className="mb-3" >
           <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Why Conservation</h2>
@@ -47,7 +54,7 @@ function Donation() {
       </div>
 
         {/*Donation Form*/}
-        <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-gray-300 py-10 rounded-lg">
+        <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-white py-10 rounded-lg" data-aos='fade-up'>
           <h1 className="text-[#569343] font-bold text-2xl text-left mb-2 ">Make a Difference Today!</h1>
           <p>Your donation helps preserve Namdapha’s wildlife and forests for future generations. Thank you for your support!</p>
           <img 

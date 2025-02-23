@@ -1,6 +1,15 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const SpeciesOfWeek = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className="bg-white">
+    <div className="bg-white" data-aos='zoom-in-right'>
       <div className="max-w-6xl mx-auto p-8 flex items-center flex-col md:flex-row">
         <div className="w-3/4 md:w-1/2 pr-4">
           <img src="fly.svg" alt="Butterfly or Moth" />

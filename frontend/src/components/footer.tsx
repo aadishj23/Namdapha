@@ -1,5 +1,8 @@
 import { Youtube, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -25,10 +28,15 @@ const importantLinks = [
 ];
 
 const Footer = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <footer className="bg-black text-white p-8 py-20">
+    <footer className="bg-black text-white p-8 py-20" >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className='text-center md:text-left'>
+        <div className='text-center md:text-left' data-aos='zoom-in'>
           <img src="./logo.png" height={50} width={50} alt="Logo" className="mb-4 mx-auto md:mx-0" />
           <h3 className="text-xl font-bold mb-4">Namdapha Tiger Reserve</h3>
           <p className="mb-2">Phone: 0000000000</p>
@@ -47,7 +55,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='text-center md:text-left'>
+        <div className='text-center md:text-left' data-aos='zoom-in'>
           <h4 className="text-yellow-500 font-bold mb-4">Quick Links</h4>
           <ul className="space-y-2">
             {navLinks.map((link) => (
@@ -60,7 +68,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='text-center md:text-left'> 
+        <div className='text-center md:text-left' data-aos='zoom-in'> 
           <h4 className="text-yellow-500 font-bold mb-4">Important Links</h4>
           <ul className="space-y-2">
             {importantLinks.map((link) => (
@@ -73,7 +81,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="relative w-full pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
+        <div className="relative w-full pt-[56.25%]" data-aos='zoom-in'> 
           <iframe
             className="absolute top-0 left-0 w-full h-full border-0"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226543.78837509238!2d96.5533069!3d27.47714435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x373e8d127c4f1835%3A0x78a85d849b34eea!2sNamdapha%20National%20Park%20%26%20Tiger%20Reserve!5e0!3m2!1sen!2sin!4v1740238778676!5m2!1sen!2sin"

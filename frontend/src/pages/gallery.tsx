@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { CameraIcon } from "lucide-react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface GalleryImage {
   id: number;
@@ -41,8 +44,13 @@ const galleryImages: GalleryImage[] = [
 ];
 
 const Gallery = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className="">
+    <div data-aos='zoom-out'>
       {/* Hero Section */}
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
@@ -53,13 +61,13 @@ const Gallery = () => {
         }}
       >
         {/* <div className="absolute inset-0 bg-black/60" /> */}
-        <div className="relative z-10 text-center text-white">
+        <div className="relative z-10 text-center text-white" data-aos='fade-up'>
           <h1 className="text-7xl font-bold mb-4 text-amber-400">Namdapha Gallery</h1>
         </div>
       </div>
 
       {/* Gallery Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16" data-aos='fade-up'>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Upload Box */}
           <div className="aspect-square bg-green-50 rounded-lg border-2 border-dashed border-green-200 flex flex-col items-center justify-center p-4 hover:bg-green-100 transition-colors cursor-pointer group">

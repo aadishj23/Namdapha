@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ErrorPage() {
     const navigate = useNavigate();
@@ -12,8 +14,12 @@ function ErrorPage() {
         return () => clearTimeout(timer); 
     }, [navigate]);
 
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true }); 
+      }, []);
+
     return (
-        <div className="flex flex-col justify-center items-center h-screen bg-black text-center px-6">
+        <div className="flex flex-col justify-center items-center h-screen bg-black text-center px-6" data-aos='zoom-out'>
             <h1 className="text-6xl font-bold mb-6 text-white">Oops!</h1>
             <p className="text-lg mb-4 text-white">
                 Something went wrong, or the page you're looking for doesn't exist.

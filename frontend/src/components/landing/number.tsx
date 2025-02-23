@@ -1,6 +1,15 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Numbers = () => {
+
+    useEffect(() => {
+      AOS.init({ duration: 1000, once: true }); 
+    }, []);
+
   return (
-    <div className="relative px-auto p-6 md:p-8 flex flex-col gap-5 py-16 md:py-24 mt-20 md:mt-40">
+    <div className="relative px-auto p-6 md:p-8 flex flex-col gap-5 py-16 md:py-24 mt-20 md:mt-40" data-aos="fade-up">
       {/* Hummingbird image - Hidden on mobile, visible on medium+ screens */}
       <img 
         src="hummingbird-bird.png" 

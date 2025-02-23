@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const HeroSection = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen" data-aos="fade-up">
       <div 
         className="absolute inset-0 min-h-[900px] "
         style={{

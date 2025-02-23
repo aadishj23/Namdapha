@@ -1,4 +1,7 @@
 import { Button } from "../components/ui/button";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface SpeciesCount {
   category: string;
@@ -41,8 +44,13 @@ const faunaItems: FaunaItem[] = [
 ];
 
 const Fauna = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" data-aos='zoom-out'>
       {/* Hero Section */}
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
@@ -53,12 +61,12 @@ const Fauna = () => {
         }}
       >
         {/* <div className="absolute inset-0 bg-black/40" /> */}
-        <div className="relative z-10 text-center text-white">
+        <div className="relative z-10 text-center text-white" data-aos='fade-up'>
           <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">FAUNA</h1>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16" data-aos='fade-up'>
         <div className="grid md:grid-cols-2 md:gap-10 items-center">
           <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
           <div className="w-full md:w-1/2 pr-0 md:pr-4 relative">
@@ -91,19 +99,18 @@ const Fauna = () => {
       </div>
 
         {/* Species Count */}
-      <div>
-        <div className="mt-5 md:mt-16 px-5 flex gap-10 min-h-[600px] flex-col lg:flex-row items-center justify-center w-screen"
+      <div data-aos='fade-up'>
+        <div className="mt-5 md:mt-16 px-5 flex gap-5 md:gap-20 min-h-[600px] flex-col lg:flex-row items-center justify-center md:justify-around w-screen"
           style={{
             backgroundImage: 'url("./numbersbg.svg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}>
           <div>
-            <h2 className="text-3xl font-bold mb-2 text-amber-500">Species Recorded</h2>
-            <h2 className="text-3xl font-bold mb-2 text-amber-500">in Namdapha</h2>
-            {/* <h3 className="text-2xl font-bold mb-8 decoration-amber-500">in Namdapha</h3> */}
+            <h2 className="text-3xl md:text-5xl font-bold mb-2 text-amber-500">Species Recorded</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-2 text-amber-500">in Namdapha</h2>
             
-            <p className="text-white max-w-xl">
+            <p className="text-white max-w-xl mt-4 md:mt-10 md:text-lg">
               Total 91 genera and 137 species of Mammals are found in Namdapha National Park, out of which 02 are Critically Endangered, 12 species are Endangered, 06 species are Near Threatened, 22 species are Vulnerable, 87 species are Least Concerned and 08 are Data Deficient and 01 species is Not Assessed as per the IUCN Red List.
             </p>
           </div>
@@ -111,7 +118,7 @@ const Fauna = () => {
           <div className=" mt-4 grid grid-cols-4 gap-2">
             {speciesCounts.map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-yellow-700 mb-2">{item.count}</div>
+                <div className="text-4xl font-bold text-[#D9A87E] mb-2">{item.count}</div>
                 <div className="text-white">{item.category}</div>
               </div>
             ))}
@@ -120,7 +127,7 @@ const Fauna = () => {
       </div>
 
         {/* Fauna Gallery */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16" data-aos='fade-up'>
         <div className="mt-24">
           <h2 className="text-3xl font-bold mb-12 text-center text-[#569343]">Fauna in Namdapha</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

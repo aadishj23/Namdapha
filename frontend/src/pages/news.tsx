@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon } from "lucide-react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface NewsItem {
   id: number;
@@ -28,8 +31,13 @@ const newsItems: NewsItem[] = [
 ];
 
 const News = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" data-aos='zoom-out'>
       {/* Hero Section */}
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
@@ -40,13 +48,13 @@ const News = () => {
         }}
       >
         {/* <div className="absolute inset-0 bg-black/60" /> */}
-        <div className="relative z-10 text-center text-white">
+        <div className="relative z-10 text-center text-white" data-aos='fade-up'>
           <h1 className="text-6xl font-bold mb-4 text-[#F1AA39]">Namdapha News</h1>
         </div>
       </div>
 
       {/* News Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16" data-aos='fade-up'>
         <div className="grid gap-8">
           {newsItems.map((item) => (
             <div key={item.id} className="flex flex-col md:flex-row gap-8 rounded-lg overflow-hidden">
@@ -77,7 +85,7 @@ const News = () => {
 
       
       {/* In the News Section */}
-      <div className="py-16">
+      <div className="py-16" data-aos='fade-up'>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-bold">In the News</h2>

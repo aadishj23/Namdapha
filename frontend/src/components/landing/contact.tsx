@@ -1,8 +1,16 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactForm = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
+
   return (
-    <div className="bg-[#024126] p-8">
+    <div className="bg-[#024126] p-8" data-aos='fade-right'>
       <div className="relative bg-[#315E49] rounded-lg p-8">
         <div className="max-w-4xl">
           <h2 className="text-3xl font-bold text-white mb-8">Contact Us</h2>
