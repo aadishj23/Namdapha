@@ -55,6 +55,11 @@ function Donation() {
 
         {/*Donation Form*/}
         <div className="relative mx-5 md:mx-10 my-5 px-5 md:px-10 bg-white py-10 rounded-lg" data-aos='fade-up'>
+          <img 
+            src="help.png" 
+            alt="helping hands" 
+            className="block md:hidden w-[150px] z-50 mx-auto"
+          />
           <h1 className="text-[#569343] font-bold text-2xl text-left mb-2 ">Make a Difference Today!</h1>
           <p>Your donation helps preserve Namdapha's wildlife and forests for future generations. </p>
           <p className="mb-5">Thank you for your support!</p>
@@ -64,7 +69,7 @@ function Donation() {
             className="hidden md:block absolute w-[150px] top-2 right-5 md:w-[200px] z-50"
           />
           <div className="flex flex-col lg:flex-row my-5">  
-            <form className="space-y-4 w-full lg:w-2/5 mx-2 lg:mx-10">
+            <form className="space-y-4 w-full lg:w-2/5 lg:mr-10">
               <div>
                 <Input placeholder="Name" className="focus-visible:ring-0 border-[#395903] focus-visible:ring-offset-0 focus:border-emerald-400 bg-green-50" />
               </div>
@@ -100,9 +105,9 @@ function Donation() {
               <p>Name of Foundation:<b> Namdapha Tiger Conservation Foundation</b></p>
               <p>Name of account holder:  <b> CF & Field Director (PT), Miao, Changlang</b></p>
               <p>Account NO. : <b>31502122510.</b></p>
-              <p>IFSC Code: <b>SBIN0007436.</b></p>
+              <p>IFSC Code: <b>SBIN0003915.</b></p>
+              <p>MICR Code :<b> 786002521</b></p>
               <p>Bank branch & Address : <b>SBI, Jairampur, PO/PS - Jairampur District - Changlang, Arunachal Pradesh.</b></p>
-              <p>TAN :<b> SHLO-00008B</b></p>
               <p>GSTIN : <b>12SHLO00008B2DL</b></p>
             </div>
         </div>

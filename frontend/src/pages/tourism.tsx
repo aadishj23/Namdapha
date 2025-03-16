@@ -3,11 +3,12 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Accommodations() {
+function Tourism() {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true }); 
   }, []);
+
     return (
       <div className="min-h-screen bg-white" data-aos='zoom-out'>
         {/* Hero Section */}
@@ -21,12 +22,12 @@ function Accommodations() {
         >
           {/* <div className="absolute inset-0 bg-black/40" /> */}
           <div className="relative z-10 text-center text-white">
-            <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Accomodations</h1>
+            <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Tourism Activities</h1>
           </div>
         </div>
       </div>
     )
   }
   
-  export default Accommodations
+  export default Tourism
   

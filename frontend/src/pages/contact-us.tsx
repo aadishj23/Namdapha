@@ -15,7 +15,7 @@ const Contact = () => {
     <div className="bg-[#f5f1ee]" data-aos='zoom-out'>
       {/* Hero Section with Map Background */}
       <div 
-        className="min-h-[300px] lg:min-h-[650px] relative flex items-center justify-center"
+        className="min-h-[400px] lg:min-h-[650px] relative flex items-center justify-center"
         style={{
           backgroundImage: 'url("./contactimage.svg")',
           backgroundSize: 'cover',

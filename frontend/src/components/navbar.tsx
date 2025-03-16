@@ -18,28 +18,27 @@ const navigationItems: NavItem[] = [
       { title: "Fauna", href: "/fauna" },
     ],
   },
-  {
-    title: "Tourism",
-    href: "/packages",
-    children: [
-      { title: "Packages", href: "/packages" },
-      { title: "Accommodations", href: "/accommodations" },
-    ],
-  },
+  { title: "Tourism", href: "/tourism" },
   {
     title: "Activities",
     href: "/safari",
     children: [
-      { title: "Safari", href: "/safari" },
-      { title: "Trekking", href: "/trekking" },
+      { title: "Anti-poaching Activities", href: "/anti-poaching-activities" },
+      { title: "Tiger Monitoring Works", href: "/tiger-monitoring-works" },
+      { title: "Wildlife Days Celebration", href: "/wildlife-days-celebration" },
+      { title: "Namdapha Butterfly Meet", href: "/namdapha-butterfly-meet" },
+      { title: "Outreach Activities", href: "/outreach-activities" },
+      { title: "Eco-Development Activities", href: "/eco-development-activities" },
+      { title: "Expeditions: Exploring the Unexplored", href: "/expeditions" },
     ],
   },
   {
     title: "Act & Rules",
     href: "/guidelines",
     children: [
-      { title: "Guidelines", href: "/guidelines" },
-      { title: "Regulations", href: "/regulations" },
+      { title: "Do's and Dont's- Guidelines", href: "/guidelines" },
+      { title: "Office Orders, Central Orders", href: "/orders" },
+      { title: "Wildlife Protection Act", href: "/wildlife-protection-act" },
     ],
   },
   { title: "Budget", href: "/budget" },
@@ -64,9 +63,9 @@ const Navbar = () => {
     <nav className="w-full bg-transparent absolute text-white z-[100] px-4 pt-4">
       {/* Action Buttons */}
       <div className="flex md:justify-end justify-between space-x-4">
-        <Link to='/safari' onClick={closeMenu}>
-          <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">Safari Booking</button>
-        </Link>
+        <a href="mailto:frnamdapha@gmail.com" onClick={closeMenu}>
+          <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">Mail Us</button>
+        </a>
         <Link to='/donation' onClick={closeMenu}>
           <button className="border border-white text-white px-4 py-2 rounded">Donate Now</button>
         </Link>

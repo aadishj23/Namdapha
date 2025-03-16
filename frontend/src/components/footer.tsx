@@ -36,8 +36,8 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white p-8 py-20" >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div className='text-center md:text-left' data-aos='zoom-in'>
-          <img src="./logo.png" height={50} width={50} alt="Logo" className="mb-4 mx-auto md:mx-0" />
+        <div className='text-left' data-aos='zoom-in'>
+          <img src="./logo.png" height={50} width={50} alt="Logo" className="mb-4 mx-0" />
           <h3 className="text-xl font-bold mb-4">Namdapha Tiger Reserve</h3>
           <p className="mb-2">Phone: 0000000000</p>
           <p className="mb-4">Email: fdnamdapha@gmail.com</p>
@@ -47,7 +47,7 @@ const Footer = () => {
             Miao, Arunachal Pradesh
           </p>
           
-            <div className="flex justify-center md:justify-start gap-4 mt-4">
+            <div className="flex justify-start gap-4 mt-4">
               <a href='https://www.youtube.com/channel/UC_o4wqnJVwIf9TYVp7w5AiA' target="_blank"><Youtube className="w-5 h-5 cursor-pointer hover:text-gray-300" /></a>
               <a href='https://www.instagram.com/namdaphatigerreserve/' target="_blank"><Instagram className="w-5 h-5 cursor-pointer hover:text-gray-300" /></a>
               <a href='https://twitter.com/NamdaphaTR' target="_blank"><Twitter className="w-5 h-5 cursor-pointer hover:text-gray-300" /></a>
@@ -55,7 +55,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='text-center md:text-left' data-aos='zoom-in'>
+        <div className='text-left' data-aos='zoom-in'>
           <h4 className="text-yellow-500 font-bold mb-4">Quick Links</h4>
           <ul className="space-y-2">
             {navLinks.map((link) => (
@@ -68,7 +68,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='text-center md:text-left' data-aos='zoom-in'> 
+        <div className='text-left' data-aos='zoom-in'> 
           <h4 className="text-yellow-500 font-bold mb-4">Important Links</h4>
           <ul className="space-y-2">
             {importantLinks.map((link) => (

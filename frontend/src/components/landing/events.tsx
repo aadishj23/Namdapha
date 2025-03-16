@@ -49,7 +49,7 @@ const UpcomingEvents = () => {
                 <h3 className="font-semibold mb-2">
                   The park will remain closed from 1 June 2022 to 31 Aug 2022
                 </h3>
-                <button className="text-green-600 flex items-center gap-1 hover:text-green-700 ring-1 ring-green-600 rounded-xl px-4 py-1">
+                <button className="text-green-600 flex items-center gap-1 hover:text-green-700 ring-1 ring-green-600 rounded-xl px-4 py-1 whitespace-nowrap">
                   Read More <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

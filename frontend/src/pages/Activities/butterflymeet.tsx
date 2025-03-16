@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Guidelines() {
+function NamdaphaButterflyMeet() {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true }); 
@@ -21,13 +21,12 @@ function Guidelines() {
           }}
         >
           {/* <div className="absolute inset-0 bg-black/40" /> */}
-          <div className="relative z-10 text-center text-white" data-aos='fade-up'>
-            <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">Guidelines</h1>
+          <div className="relative z-10 text-center text-white">
+            <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Namdapha Butterfly Meet</h1>
           </div>
         </div>
       </div>
     )
   }
   
-  export default Guidelines
-  
+export default NamdaphaButterflyMeet
