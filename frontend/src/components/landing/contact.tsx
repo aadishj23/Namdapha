@@ -13,7 +13,7 @@ const ContactForm = () => {
     <div className="bg-[#024126] p-8" data-aos='fade-right'>
       <div className="relative bg-[#315E49] rounded-lg p-8">
         <div className="max-w-4xl">
-          <h2 className="text-3xl font-bold text-white mb-8 pt-96 lg:pt-0">Contact Us</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 pt-48 lg:pt-0">Contact Us</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             <div className="flex flex-col text-white">
@@ -66,11 +66,11 @@ const ContactForm = () => {
           </form>
         </div>
 
-        <div className="absolute right-0 top-[-140px] lg:top-[-100px] h-full w-full lg:w-1/3">
+        <div className="absolute right-0 top-[0px] lg:top-[-100px] h-full w-full lg:w-1/3">
           <img
             src="./tiger.png"
             alt="Tiger"
-            className="block h-3/5 lg:h-full w-full object-cover"
+            className="block h-1/5 lg:h-full w-full object-cover"
           />
         </div>
       </div>

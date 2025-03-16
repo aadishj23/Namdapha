@@ -41,13 +41,13 @@ const Numbers = () => {
 
         <div className="md:w-1/2 pl-0 md:pl-4 mt-4 md:mt-0 mx-5 flex justify-center">
           <div>
-        <p className="text-sm text-white text-center md:text-left">
+        <p className="text-sm text-white text-left">
           Namdapha Tiger Reserve was declared in the year 1983 as the 15th Tiger Project of the country 
           with a core area of 1985.245 Sq.Km and a buffer area of 245 Sq.Km. Thus, the total area of the 
           Reserve is 1985 Sq.Km. Namdapha is in fact the name of a river which originates from Daphabum 
           (Dapha is the name of hill, <span className="text-[#F1AA39]">Bum means peak of hill) and meets Noa-Dehing river.</span>
         </p>
-        <p className="text-sm text-white mt-2 md:text-left">
+        <p className="text-sm text-white mt-2 text-left">
           The area is bounded between the 27°23´N to 27°39´N latitude and 96°15´E to 96°58´E longitude. 
           Namdapha National Park & Tiger Reserve is located in the Changlang district of Arunachal Pradesh. 
           The area covered by the Namdapha Tiger Reserve was originally a reserve forest.
