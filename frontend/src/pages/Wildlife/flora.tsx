@@ -60,7 +60,7 @@ const Flora = () => {
       >
 
         <div className="relative z-10 text-center text-white" data-aos='fade-up'>
-          <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">FLORA</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#F1AA39]">FLORA</h1>
         </div>
       </div>
 

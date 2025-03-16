@@ -23,7 +23,7 @@ function Donation() {
       >
         {/* <div className="absolute inset-0 bg-black/40" /> */}
         <div className="relative z-10 text-center text-white" data-aos='fade-up'>
-          <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]">Support Namdapha</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#F1AA39]">Support Namdapha</h1>
           <p className="w-full md:w-3/5 text-center px-3 md:mx-auto">Namdapha National Park is a treasure trove of biodiversity, home to rare and endangered species. Your generous contribution helps us protect this incredible ecosystem, conserve wildlife, and support local communities in sustainable living.</p>
         </div>
       </div>

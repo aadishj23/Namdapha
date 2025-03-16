@@ -21,7 +21,7 @@ const navigationItems: NavItem[] = [
   { title: "Tourism", href: "/tourism" },
   {
     title: "Activities",
-    href: "/safari",
+    href: "/anti-poaching-activities",
     children: [
       { title: "Anti-poaching Activities", href: "/anti-poaching-activities" },
       { title: "Tiger Monitoring Works", href: "/tiger-monitoring-works" },

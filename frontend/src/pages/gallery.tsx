@@ -62,7 +62,7 @@ const Gallery = () => {
       >
         {/* <div className="absolute inset-0 bg-black/60" /> */}
         <div className="relative z-10 text-center text-white" data-aos='fade-up'>
-          <h1 className="text-7xl font-bold mb-4 text-amber-400">Namdapha Gallery</h1>
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 text-amber-400">Namdapha Gallery</h1>
         </div>
       </div>
 

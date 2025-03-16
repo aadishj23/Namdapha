@@ -22,7 +22,7 @@ function AntiPoachingActivities() {
         >
           {/* <div className="absolute inset-0 bg-black/40" /> */}
           <div className="relative z-10 text-center text-white">
-            <h1 className="text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Anti Poaching Activities</h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Anti Poaching Activities</h1>
           </div>
         </div>
       </div>
