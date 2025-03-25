@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const navLinks = [
   { name: "Home", path: "/" },
   { name: "Wildlife", path: "/flora" },
-  { name: "Tourism", path: "/packages" },
+  { name: "Tourism", path: "/tourist-guide" },
   { name: "Act & Rules", path: "/guidelines" },
   { name: "Budget", path: "/budget" },
   { name: "News", path: "/news" },

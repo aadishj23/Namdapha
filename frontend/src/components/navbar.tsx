@@ -18,20 +18,15 @@ const navigationItems: NavItem[] = [
       { title: "Fauna", href: "/fauna" },
     ],
   },
-  { title: "Tourism", href: "/tourism" },
-  {
-    title: "Activities",
-    href: "/anti-poaching-activities",
-    children: [
-      { title: "Anti-poaching Activities", href: "/anti-poaching-activities" },
-      { title: "Tiger Monitoring Works", href: "/tiger-monitoring-works" },
-      { title: "Wildlife Days Celebration", href: "/wildlife-days-celebration" },
-      { title: "Namdapha Butterfly Meet", href: "/namdapha-butterfly-meet" },
-      { title: "Outreach Activities", href: "/outreach-activities" },
-      { title: "Eco-Development Activities", href: "/eco-development-activities" },
-      { title: "Expeditions: Exploring the Unexplored", href: "/expeditions" },
-    ],
+  { title: "Tourism", 
+    href: "/tourist-guide",
+    children : [
+      {title: "Tourist Guide", href: "/tourist-guide"},
+      {title: "Tourism Activities", href: "/tourism-activities"},
+      {title: "Tourist Permits", href: "/toursit-permits"}
+    ]
   },
+  { title: "Activities", href: "/activities" },
   {
     title: "Act & Rules",
     href: "/guidelines",

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function Tourism() {
+function TouristActivities() {
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true }); 
@@ -29,5 +29,4 @@ function Tourism() {
     )
   }
   
-  export default Tourism
-  
+export default TouristActivities  

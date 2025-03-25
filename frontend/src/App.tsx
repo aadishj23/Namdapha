@@ -7,15 +7,11 @@ import Gallery from './pages/gallery'
 import Navbar from './components/navbar'
 import Donation from './pages/donation'
 import Flora from './pages/Wildlife/flora'
-import Tourism from './pages/tourism'
-import AntiPoachingActivities from './pages/Activities/AntiPoachingActivities'
-import TigerMonitoringWorks from './pages/Activities/TigerMonitoringWorks'
-import WildlifeDaysCelebration from './pages/Activities/WildlifeDaysCelebration'
-import NamdaphaButterflyMeet from './pages/Activities/butterflymeet'
-import OutreachActivities from './pages/Activities/outreach'
-import EcoDevelopmentActivities from './pages/Activities/eco-development'
-import Expeditions from './pages/Activities/expeditions'
+import Activities from './pages/activities'
 import Guidelines from './pages/Acts and Rules/guidelines'
+import TouristActivities from './pages/Tourism/touristactivities'
+import TouristGuide from './pages/Tourism/touristguides'
+import TouristPermits from './pages/Tourism/touristpermits'
 import Orders from './pages/Acts and Rules/orders'
 import WildlifeProtectionAct from './pages/Acts and Rules/wildlife-protection-act'
 import Budget from './pages/budget'
@@ -38,15 +34,11 @@ const App = () => {
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/donation' element={<Donation />} />
-            <Route path='/tourism' element={<Tourism />} />
-            <Route path='/anti-poaching-activities' element={<AntiPoachingActivities />} />
-            <Route path='/tiger-monitoring-works' element={<TigerMonitoringWorks />} />
-            <Route path='/wildlife-days-celebration' element={<WildlifeDaysCelebration />} />
-            <Route path='/namdapha-butterfly-meet' element={<NamdaphaButterflyMeet />} />
-            <Route path='/outreach-activities' element={<OutreachActivities />} />
-            <Route path='/eco-development-activities' element={<EcoDevelopmentActivities />} />
-            <Route path='/expeditions' element={<Expeditions />} />
+            <Route path='/activities' element={<Activities />} />
             <Route path='/guidelines' element={<Guidelines />} />
+            <Route path='/tourism-activities' element={<TouristActivities />} />
+            <Route path='/tourist-guide' element={<TouristGuide />} />
+            <Route path='/toursit-permits' element={<TouristPermits />} />
             <Route path='/orders' element={<Orders />} />
             <Route path='/wildlife-protection-act' element={<WildlifeProtectionAct />} />
             <Route path='/budget' element={<Budget />} />
