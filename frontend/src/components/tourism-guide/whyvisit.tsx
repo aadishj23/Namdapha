@@ -36,7 +36,7 @@ const WhyVisit = () => {
     }, []);
 
   return (
-    <div className="relative px-auto p-6 md:p-8 flex flex-col gap-5 py-16 md:py-24 mt-0 md:mt-40" data-aos="fade-up">
+    <div className="relative px-auto p-6 md:p-8 flex flex-col gap-5 py-16 md:py-24 mt-10 md:mt-40" data-aos="fade-up">
       {/* Hummingbird image - Hidden on mobile, visible on medium+ screens */}
       <img 
         src="hummingbird-bird.png" 

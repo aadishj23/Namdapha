@@ -21,7 +21,7 @@ const HeroSection = () => {
       
       <div className="relative h-full flex flex-col items-center justify-center text-white text-center px-4 pt-28">
 
-        <h1 className=" text-5xl xl:text-8xl font-extrabold mb-4 text-[#F1AA39]">
+        <h1 className="text-6xl xl:text-8xl font-extrabold mb-4 text-[#F1AA39]">
           TOURISM
         </h1>
         
