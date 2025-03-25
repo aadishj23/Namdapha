@@ -38,9 +38,9 @@ function TouristActivities() {
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Wildlife observation</h1>
               <p className="mb-3 text-[#535353]">Nestled in Arunachal Pradesh, Namdapha National Park is home to over thousands of known fauna & flora species, making it a top destination for scientists, researchers, bird watchers & photographers interested in Natural world. From rare species to vibrant tropical wildlife, it offers a unique and unforgettable wildlife observation experience.</p>
-              <div className="flex gap-6 mt-5">
-                <img src='./Rectangle.png' alt='img1' className="w-40 rounded-lg"/>
-                <img src='./Rectangle.png' alt='img1' className="w-40 rounded-lg"/>
+              <div className="flex gap-3 md:gap-6 justify-center md:justify-start mt-5">
+                <img src='./Rectangle.png' alt='img1' className="w-32 md:w-40 rounded-lg"/>
+                <img src='./Rectangle.png' alt='img1' className="w-32 md:w-40 rounded-lg"/>
               </div>
             </div>
             <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
