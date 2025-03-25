@@ -34,8 +34,12 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-black text-white p-8 py-20" >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer 
+      className="text-white p-8 py-20 bg-cover bg-no-repeat bg-center relative" 
+      style={{ backgroundImage: "url('/footer-image.png')" }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className='text-left' data-aos='zoom-in'>
           <img src="./logo.png" height={50} width={50} alt="Logo" className="mb-4 mx-0" />
           <h3 className="text-xl font-bold mb-4">Namdapha Tiger Reserve</h3>
