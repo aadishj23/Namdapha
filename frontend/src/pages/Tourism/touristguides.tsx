@@ -1,7 +1,9 @@
 // import React from 'react'
 import HeroSection from "@/components/tourism-guide/hero";
 import WhyVisit from "@/components/tourism-guide/whyvisit";
-// import Whenvisit from "@/components/tourism-guide/whenvisit";
+import Whenvisit from "@/components/tourism-guide/whenvisit";
+import Marqee from "@/components/tourism-guide/marqee";
+import Howvisit from "@/components/tourism-guide/howvisit";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -22,7 +24,9 @@ function TouristGuide() {
             <HeroSection />
             <WhyVisit />
           </div>
-          {/* <Whenvisit /> */}
+          <Whenvisit />
+          <Marqee />
+          <Howvisit />
         </div>
       </div>
     )
