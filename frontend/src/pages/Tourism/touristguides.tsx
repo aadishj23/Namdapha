@@ -1,4 +1,7 @@
 // import React from 'react'
+import HeroSection from "@/components/tourism-guide/hero";
+import WhyVisit from "@/components/tourism-guide/whyvisit";
+// import Whenvisit from "@/components/tourism-guide/whenvisit";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,23 +13,19 @@ function TouristGuide() {
   }, []);
 
     return (
-      <div className="min-h-screen bg-white" data-aos='zoom-out'>
-        {/* Hero Section */}
-        <div 
-          className="min-h-[600px] relative flex items-center justify-center"
-          style={{
-            backgroundImage: 'url("./flowerbanner.png")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          {/* <div className="absolute inset-0 bg-black/40" /> */}
-          <div className="relative z-10 text-center text-white">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Tourist Guide</h1>
+      <div>
+        <div className="min-h-screen w-full">
+          <div
+            className="min-h-screen w-full bg-cover bg-repeat"
+            style={{ backgroundImage: "url('/bgtexture.png')" }}
+          >
+            <HeroSection />
+            <WhyVisit />
           </div>
+          {/* <Whenvisit /> */}
         </div>
       </div>
     )
   }
   
-export default TouristGuide  
+export default TouristGuide
