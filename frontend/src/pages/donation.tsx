@@ -32,22 +32,22 @@ function Donation() {
       <h1 className="text-[#569343] font-bold text-2xl text-center mb-10">Why Donate?</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mb-10" data-aos='fade-up'>
         <div className="mb-3" >
-          <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
+          <img src='./wildlife_conservation.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Why Conservation</h2>
           <p className="my-4 w-4/5 mx-auto font-thin">Help protect endangered species like the Red Panda, Clouded Leopard, and Hoolock Gibbon.</p>
         </div>
         <div className="mb-3">
-          <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
+          <img src='./forest.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Forest Preservation</h2>
           <p className="my-4 w-4/5 mx-auto font-thin">Support reforestation and anti-poaching efforts to maintain the rich biodiversity of Namdapha.</p>
         </div>
         <div className="mb-3">
-          <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
+          <img src='./community.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Community Empowerment</h2>
           <p className="my-4 w-4/5 mx-auto font-thin">Aid indigenous communities by promoting eco-friendly livelihoods and education.</p>
         </div>
         <div className="mb-3">
-          <img src='./logo.png' alt="logo" className="block w-20 mx-auto mb-4" />
+          <img src='./research.png' alt="logo" className="block w-20 mx-auto mb-4" />
           <h2 className="font-bold">Research & Awareness</h2>
           <p className="my-4 w-4/5 mx-auto font-thin">Fund scientific research and awareness programs to foster sustainable conservation.</p>
         </div>

@@ -28,7 +28,7 @@ function Guidelines() {
 
         <p className="text-[#569343] font-medium text-center md:text-2xl mt-2 md:mt-8">Dos & Don'ts: Guidelines for a Safe and</p>
         <p className="text-[#569343] font-medium text-center md:text-2xl">Responsible Visit to Namafapha Tiger Reserve</p>
-        <div className="mx-3 md:mx-8 mb-20 mt-5 md:mt-10 flex flex-col md:flex-row space-x-0 md:space-x-3 space-y-5 md:space-y-0">
+        <div className="mx-3 md:mx-8 pb-20 mt-5 md:mt-10 flex flex-col md:flex-row space-x-0 md:space-x-3 space-y-5 md:space-y-0">
           <div className="flex-1 border-[2px] border-[#395903] px-5 md:px-8 py-8 rounded-2xl">
             <h1 className="text-[#395903] font-bold text-center text-4xl mb-5">Do(s)</h1>
             <ul className="list-disc list-outside space-y-3 pl-4">
@@ -47,7 +47,7 @@ function Guidelines() {
             </ul>
           </div>
           <div className="flex-1 border-[2px] border-[#395903] px-5 md:px-8 py-8 rounded-2xl">
-            <h1 className="text-[#395903] font-bold text-center text-4xl mb-5">Don't(s)</h1>
+            <h1 className="text-[#395903] font-bold text-center text-4xl pb-5">Don't(s)</h1>
             <ul className="list-disc list-outside space-y-3 pl-4">
               <li>Don't enter the Park with fire arms/explosives.</li>
               <li>Don't enter the Park with single use plastic.</li>
