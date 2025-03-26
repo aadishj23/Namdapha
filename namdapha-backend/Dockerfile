@@ -1,20 +1,12 @@
-# Use an official OpenJDK runtime
-FROM openjdk:17-jdk-slim
 
-# Set working directory inside the container
-WORKDIR /app
-
-# Copy the Maven wrapper and pom.xml to cache dependencies
-COPY pom.xml mvnw mvnw.cmd ./
-COPY .mvn .mvn
-
-# Run Maven to download dependencies
-RUN ./mvnw dependency:go-offline
-
-# Copy the rest of the project and build the JAR
+FROM maven:3.8.5-openjdk-17 AS build
 COPY . .
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests 
+# Use an official OpenJDK runtime
+FROM openjdk:17.0.1-jdk-slim
+
+COPY --from=build /target/namdapha-backend-0.0.1-SNAPSHOT.jar namdapha-backend-0.0.1-SNAPSHOT.jar
 
 # Run the application
 EXPOSE 8080
-CMD ["java", "-jar", "target/namdapha-backend-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT [ "java","-jar","/namdapha-backend-0.0.1-SNAPSHOT.jar" ]
