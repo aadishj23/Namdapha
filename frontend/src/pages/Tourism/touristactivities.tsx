@@ -10,7 +10,7 @@ function TouristActivities() {
   }, []);
 
     return (
-      <div className="min-h-screen bg-white" data-aos='zoom-out'>
+      <div className="min-h-screen bg-[#F5F1EE]" data-aos='zoom-out'>
         {/* Hero Section */}
         <div 
           className="min-h-[600px] relative flex items-center justify-center"
@@ -45,19 +45,19 @@ function TouristActivities() {
             </div>
             <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
           </div>
-          <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 mt-10">
+          <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 mt-10 md:mt-20">
             <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Oxygen bath & Forest Meditation</h1>
-              <p className="mb-3 text-[#535353]">Oxygen Bath: Namdapha’s pristine forests provide a natural "oxygen bath," where the fresh, pure air rejuvenates both body and mind, promoting relaxation and vitality.</p>
+              <p className="mb-3 text-[#535353]">Oxygen Bath: Namdapha's pristine forests provide a natural "oxygen bath," where the fresh, pure air rejuvenates both body and mind, promoting relaxation and vitality.</p>
               <p className="text-[#535353]">Forest Meditation: The serene surroundings of the park offer the perfect setting for meditation, helping you connect with nature, find inner peace, and enhance mental well-being amidst the tranquility of the forest.</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 mt-10 mb-20">
+          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 mt-10 pb-20">
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Sky watch: Stargazing at Namdapha</h1>
               <p className="mb-3 text-[#535353]">Namdapha National Park, with its remote location and minimal light pollution, offers an incredible stargazing experience. The clear, unpolluted skies allow you to observe a spectacular display of stars, planets, and constellations.
-              It’s an ideal spot for night sky enthusiasts to enjoy the beauty of the Milky Way, meteor showers, and celestial phenomena, all while surrounded by the park's serene wilderness.</p>
+              It's an ideal spot for night sky enthusiasts to enjoy the beauty of the Milky Way, meteor showers, and celestial phenomena, all while surrounded by the park's serene wilderness.</p>
               <p className="text-[#535353]">You may need to bring your own equipment and accompanied by an expert & for best experience.</p>
             </div>
             <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
