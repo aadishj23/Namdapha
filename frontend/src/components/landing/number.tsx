@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -82,11 +83,13 @@ const Numbers = () => {
       </div>
 
       {/* Button */}
-      <div className="flex justify-center items-center py-8 md:py-10">
-        <button className="bg-[#F1AA39] text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition-colors">
-          Read More
-        </button>
-      </div>
+      <Link to='/flora'>
+        <div className="flex justify-center items-center py-8 md:py-10">
+          <button className="bg-[#F1AA39] text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition-colors">
+            Read More
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };

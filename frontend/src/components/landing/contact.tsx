@@ -1,13 +1,53 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { useEffect } from "react";
+import { useEffect , useState} from "react";
+import { useRecoilState } from "recoil";
+import { contact } from "@/store/atoms/contact";
 import AOS from "aos";
+import axios from 'axios';
 import "aos/dist/aos.css";
 
+
 const ContactForm = () => {
+
+  const [contactData, setContactData] = useRecoilState(contact)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true }); 
   }, []);
+
+  function handleChangeContact(event: any) {
+    const { name, value } = event.target
+    setContactData(prevContactData => ({
+        ...prevContactData,
+        [name]: value
+    }))
+  }
+
+  async function handleContactSubmit(event: any) {
+    event.preventDefault()
+    setIsLoading(true)
+    try {
+        await axios({
+            url: `${import.meta.env.VITE_BACKEND_URL}/contactus/submit`,
+            method: "POST",
+            data: JSON.stringify({
+                name: contactData.Name,
+                email: contactData.Email,
+                message: contactData.Message
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+    } catch (error) {
+        console.error(error)
+        setError('Something went wrong. Please try again later.')
+    } finally {
+        setIsLoading(false)
+    }
+}
 
   return (
     <div className="bg-[#024126] p-8" data-aos='fade-right'>
@@ -44,25 +84,73 @@ const ContactForm = () => {
 
           <p className="text-white mb-6">We are here to answer your questions.</p>
 
-          <form className="space-y-4">
+          <form 
+            className="space-y-4" 
+            onSubmit={handleContactSubmit}
+          >
             <input
               type="text"
               placeholder="Name"
+              name="Name"
+              value={contactData.Name}
+              onChange={handleChangeContact}
+              required
               className="outline-none w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-white"
             />
             <input
               type="email"
               placeholder="Email"
+              name="Email"
+              value={contactData.Email}
+              onChange={handleChangeContact}
+              required
               className="outline-none w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-white"
             />
             <textarea
               placeholder="Message"
               rows={6}
+              name="Message"
+              value={contactData.Message}
+              onChange={handleChangeContact}
+              required
               className="outline-none w-full p-3 rounded-lg bg-transparent border border-white text-white placeholder-white"
             />
-            <button className="w-full bg-white text-green-800 py-3 rounded-lg hover:bg-gray-100 transition-colors">
-              Send
-            </button>
+            {error && (
+              <p className="text-red-500 mb-4">{error}</p>
+            )}
+            <button
+                    type="submit"
+                    className={`w-full py-3 rounded-lg transition-colors ${isLoading ? 'bg-gray-400' : 'bg-white text-green-800 hover:bg-gray-100'}`}
+                    disabled={isLoading}
+                >
+                    {isLoading ? (
+                        <div className="flex items-center justify-center">
+                            <svg
+                                className="animate-spin h-5 w-5 mr-3 text-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                            >
+                                <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                ></circle>
+                                <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zM12 16a4 4 0 010-8V4a8 8 0 100 16v-4z"
+                                ></path>
+                            </svg>
+                            Sending...
+                        </div>
+                    ) : (
+                        'Send'
+                    )}
+                </button>
           </form>
         </div>
 
