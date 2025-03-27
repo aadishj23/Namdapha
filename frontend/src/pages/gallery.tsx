@@ -27,14 +27,14 @@ const Gallery: React.FC = () => {
     fetchGalleryImages();
   }, []);
 
-  useEffect(() => {
-    if (selectedImage) {
-      window.scrollTo({
-        top: window.innerHeight / 2,
-        behavior: "smooth",
-      });
-    }
-  }, [selectedImage]);
+  // useEffect(() => {
+  //   if (selectedImage) {
+  //     window.scrollTo({
+  //       top: window.innerHeight / 2,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // }, [selectedImage]);
 
 
   // Fetch images from backend

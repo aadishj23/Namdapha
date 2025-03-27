@@ -37,14 +37,14 @@ function Gallery() {
     fetchImages();
   }, []);
 
-  useEffect(() => {
-    if (selectedImage) {
-      window.scrollTo({
-        top: window.innerHeight / 2,
-        behavior: "smooth",
-      });
-    }
-  }, [selectedImage]);
+  // useEffect(() => {
+  //   if (selectedImage) {
+  //     window.scrollTo({
+  //       top: window.innerHeight / 2,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // }, [selectedImage]);
 
 
   // Delete image function

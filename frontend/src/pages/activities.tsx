@@ -94,24 +94,24 @@ function Activities() {
           </div>
 
           <div className="relative w-screen overflow-hidden mb-40 mt-0">
-      {/* Desktop View: Show all images side by side */}
-      <div className="hidden md:flex flex-wrap justify-center items-center w-screen">
-        <img src="./animal1.png" alt="animal1" className="w-1/4 h-[600px] object-cover" />
-        <img src="./animal2.png" alt="animal2" className="w-1/4 h-[600px] object-cover" />
-        <img src="./animal3.png" alt="animal3" className="w-1/4 h-[600px] object-cover" />
-        <img src="./animal4.png" alt="animal4" className="w-1/4 h-[600px] object-cover" />
-      </div>
+            {/* Desktop View: Show all images side by side */}
+            <div className="hidden md:flex flex-wrap justify-center items-center w-screen">
+              <img src="./animal1.png" alt="animal1" className="w-1/4 h-[600px] object-cover" />
+              <img src="./animal2.png" alt="animal2" className="w-1/4 h-[600px] object-cover" />
+              <img src="./animal3.png" alt="animal3" className="w-1/4 h-[600px] object-cover" />
+              <img src="./animal4.png" alt="animal4" className="w-1/4 h-[600px] object-cover" />
+            </div>
 
-      {/* Mobile View: Infinite Scrolling Animation */}
-      <div className="md:hidden flex w-screen overflow-hidden">
-        <div className="flex w-[400%] animate-animal">
-          <img src="./animal1.png" alt="animal1" className="w-screen h-[400px] object-cover" />
-          <img src="./animal2.png" alt="animal2" className="w-screen h-[400px] object-cover" />
-          <img src="./animal3.png" alt="animal3" className="w-screen h-[400px] object-cover" />
-          <img src="./animal4.png" alt="animal4" className="w-screen h-[400px] object-cover" />
-        </div>
-      </div>
-    </div>
+            {/* Mobile View: Infinite Scrolling Animation */}
+            <div className="md:hidden flex w-screen overflow-hidden">
+              <div className="flex w-[400%] animate-animal">
+                <img src="./animal1.png" alt="animal1" className="w-screen h-[400px] object-cover" />
+                <img src="./animal2.png" alt="animal2" className="w-screen h-[400px] object-cover" />
+                <img src="./animal3.png" alt="animal3" className="w-screen h-[400px] object-cover" />
+                <img src="./animal4.png" alt="animal4" className="w-screen h-[400px] object-cover" />
+              </div>
+            </div>
+          </div>
 
           {/* Content Section 3 */}
           <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 md:px-20 mb-32">
