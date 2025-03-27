@@ -1,15 +1,6 @@
-import { Carousel } from "@/components/ui/apple-cards-carousel";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-const imageItems = [
-  "animal1.png",
-  "animal2.png",
-  "animal2.png",
-  "animal3.png",
-  "animal4.png",
-];
 
 function Activities() {
 
@@ -30,7 +21,7 @@ function Activities() {
         >
           {/* <div className="absolute inset-0 bg-black/40" /> */}
           <div className="relative z-10 text-center text-white">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Tourism Activities</h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-[#F1AA39]" data-aos='fade-up'>Activities</h1>
           </div>
         </div>
 
@@ -76,7 +67,7 @@ function Activities() {
 
           <div className="mt-10 md:mt-16 px-5 min-h-[1400px] md:min-h-[650px] w-screen"
           style={{
-            backgroundImage: 'url("./numbersbg.svg")',
+            backgroundImage: 'url("./shadeup.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}>
@@ -102,9 +93,25 @@ function Activities() {
             </div>
           </div>
 
-          <div className="w-full h-full py-20" data-aos='zoom-in-left'>
-            <Carousel items={imageItems} />
-          </div>          
+          <div className="relative w-screen overflow-hidden mb-40 mt-0">
+      {/* Desktop View: Show all images side by side */}
+      <div className="hidden md:flex flex-wrap justify-center items-center w-screen">
+        <img src="./animal1.png" alt="animal1" className="w-1/4 h-[600px] object-cover" />
+        <img src="./animal2.png" alt="animal2" className="w-1/4 h-[600px] object-cover" />
+        <img src="./animal3.png" alt="animal3" className="w-1/4 h-[600px] object-cover" />
+        <img src="./animal4.png" alt="animal4" className="w-1/4 h-[600px] object-cover" />
+      </div>
+
+      {/* Mobile View: Infinite Scrolling Animation */}
+      <div className="md:hidden flex w-screen overflow-hidden">
+        <div className="flex w-[400%] animate-animal">
+          <img src="./animal1.png" alt="animal1" className="w-screen h-[400px] object-cover" />
+          <img src="./animal2.png" alt="animal2" className="w-screen h-[400px] object-cover" />
+          <img src="./animal3.png" alt="animal3" className="w-screen h-[400px] object-cover" />
+          <img src="./animal4.png" alt="animal4" className="w-screen h-[400px] object-cover" />
+        </div>
+      </div>
+    </div>
 
           {/* Content Section 3 */}
           <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 md:px-20 mb-32">

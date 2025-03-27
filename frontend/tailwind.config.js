@@ -6,12 +6,17 @@ module.exports = {
   	extend: {
 		animation: {
 			marquee: "marquee 10s linear infinite",
+			animal: "animal 8s linear infinite",
 		  },
 		  keyframes: {
 			marquee: {
 			  "0%": { transform: "translateX(100%)" },
 			  "100%": { transform: "translateX(-100%)" },
 			},
+			animal: {
+				"0%": { transform: "translateX(0)" },
+				"100%": { transform: "translateX(-150%)" },
+			  },
 		  },
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -22,7 +22,7 @@ const navigationItems: NavItem[] = [
     href: "/tourist-guide",
     children : [
       {title: "Tourist Guide", href: "/tourist-guide"},
-      {title: "Tourism Activities", href: "/tourism-activities"},
+      {title: "Tourist Activities", href: "/tourism-activities"},
       {title: "Tourist Permits", href: "/toursit-permits"}
     ]
   },

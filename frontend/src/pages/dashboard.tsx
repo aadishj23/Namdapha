@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { Page } from "@/store/atoms/adminpage";
 import { Menu } from "lucide-react";
 import SpeciesOfWeek from "@/components/admin panel/species";
 import ContactMessages from "@/components/admin panel/contactus";
@@ -7,7 +9,7 @@ import News from "@/components/admin panel/news";
 import UpcomingEvents from "@/components/admin panel/upcomingEvents";
 
 const Dashboard = () => {
-  const [activePage, setActivePage] = useState("Dashboard");
+  const [activePage, setActivePage] = useRecoilState(Page);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const renderPage = () => {
@@ -54,6 +56,7 @@ const Dashboard = () => {
                 className={`p-2 cursor-pointer hover:bg-gray-700 ${activePage === item ? "bg-gray-700" : ""}`}
                 onClick={() => {
                   setActivePage(item);
+                  sessionStorage.setItem("page", item); 
                   setSidebarOpen(false); 
                 }}
               >

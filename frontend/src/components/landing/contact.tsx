@@ -12,6 +12,7 @@ const ContactForm = () => {
   const [contactData, setContactData] = useRecoilState(contact)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true }); 
@@ -41,6 +42,17 @@ const ContactForm = () => {
                 'Content-Type': 'application/json'
             },
         })
+        setSuccess('Message sent successfully!')
+        setError('')
+        setContactData({
+            Name: '',
+            Email: '',
+            Message: ''
+        })
+        setTimeout(() => {
+            setSuccess('')
+        }
+        , 3000)
     } catch (error) {
         console.error(error)
         setError('Something went wrong. Please try again later.')
@@ -117,6 +129,9 @@ const ContactForm = () => {
             />
             {error && (
               <p className="text-red-500 mb-4">{error}</p>
+            )}
+            {success && (
+              <p className="text-green-500 mb-4">{success}</p>
             )}
             <button
                     type="submit"
