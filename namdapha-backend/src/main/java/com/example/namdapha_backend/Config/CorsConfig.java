@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:3000") // Allow frontend origin
+                        .allowedOrigins("https://namdapha-axuo.vercel.app/") // Allow frontend origin
                         .allowedMethods("GET", "POST", "PUT", "DELETE");
             }
         };
