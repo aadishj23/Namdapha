@@ -18,9 +18,9 @@ public class ImageController {
 
     @PostMapping("/upload")
     public ResponseEntity<Image> uploadImage(@RequestParam("file")MultipartFile file,
-                                             @RequestParam(value = "uploadedBy",defaultValue = "Anonymous")String uploadedBy){
+                                             @RequestParam(value = "uploadedBy",defaultValue = "Anonymous")String uploadedBy,String folderName){
         try{
-            Image uploadedImage = imageService.uploadImage(file,uploadedBy);
+            Image uploadedImage = imageService.uploadImage(file,uploadedBy,folderName);
             return ResponseEntity.ok(uploadedImage) ;
         }
         catch(IOException e){
