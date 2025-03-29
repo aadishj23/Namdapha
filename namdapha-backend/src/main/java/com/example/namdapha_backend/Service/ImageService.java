@@ -22,9 +22,9 @@ public class ImageService {
    @Autowired
    private ImageRepository imageRepository ;
 
-   public Image uploadImage(MultipartFile file,String uploadedBy) throws IOException {
+   public Image uploadImage(MultipartFile file,String uploadedBy, String folderName) throws IOException {
        Map uploadResult = cloudinary.uploader().upload(file.getBytes(),
-                           ObjectUtils.asMap("folder","gallery")) ;
+                           ObjectUtils.asMap("folder",folderName)) ;
 
        Image image = Image.builder()
                .imageURL(uploadResult.get("secure_url").toString())
@@ -41,6 +41,7 @@ public class ImageService {
 
        cloudinary.uploader().destroy(image.getPublicID(),ObjectUtils.emptyMap())  ;
        imageRepository.deleteById(imageId);
+
 
    }
 
