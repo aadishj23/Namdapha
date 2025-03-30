@@ -22,7 +22,7 @@ public class EventController {
     private EventService eventService ;
 
     @PostMapping("/add")
-    public ResponseEntity<Event> addNews(@RequestParam("event") String eventJson, @RequestPart("file") MultipartFile file){
+    public ResponseEntity<Event> addEvent(@RequestParam("event") String eventJson, @RequestPart("file") MultipartFile file){
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -39,7 +39,7 @@ public class EventController {
     }
 
     @DeleteMapping("/delete/{eventID}")
-    public ResponseEntity<String> deleteNews(@PathVariable String eventID){
+    public ResponseEntity<String> deleteEvent(@PathVariable String eventID){
         try{
             eventService.deleteEvent(eventID);
             return ResponseEntity.ok("Event deleted successfully") ;
