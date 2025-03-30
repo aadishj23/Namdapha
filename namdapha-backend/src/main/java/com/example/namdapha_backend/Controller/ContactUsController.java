@@ -2,6 +2,7 @@ package com.example.namdapha_backend.Controller;
 
 import com.example.namdapha_backend.Model.ContactUs;
 import com.example.namdapha_backend.Service.ContactUsService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,5 +29,11 @@ public class ContactUsController {
     public ResponseEntity<List<ContactUs>> getMessages(){
         List<ContactUs> allMessages = contactUsService.getAllMessages();
         return ResponseEntity.ok(allMessages) ;
+    }
+
+    @DeleteMapping("/delete/{messageId}")
+    public ResponseEntity<ContactUs> deleteMessage(@PathVariable String messageId){
+        ContactUs message = contactUsService.deleteMessage(messageId) ;
+        return ResponseEntity.ok(message) ;
     }
 }

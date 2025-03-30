@@ -21,10 +21,12 @@ public class GalleryService {
 
     public Gallery saveToGallery(MultipartFile file, String uploadedBy) throws IOException {
         String folderName = "gallery";
-       Image uploadedImage = imageService.uploadImage(file,uploadedBy,folderName) ;
-       Gallery galleryImage = Gallery.builder()
-               .galleryImage(uploadedImage)
-               .build() ;
+            Image uploadedImage = imageService.uploadImage(file,uploadedBy,"gallery") ;
+
+        Gallery galleryImage = Gallery.builder()
+                        .galleryImage(uploadedImage)
+                        .build();
+
        return galleryRepository.save(galleryImage) ;
     }
 

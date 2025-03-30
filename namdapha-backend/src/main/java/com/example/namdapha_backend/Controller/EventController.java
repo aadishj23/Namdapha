@@ -22,11 +22,11 @@ public class EventController {
     private EventService eventService ;
 
     @PostMapping("/add")
-    public ResponseEntity<Event> addNews(@RequestParam("event") String newsJson, @RequestPart("file") MultipartFile file){
+    public ResponseEntity<Event> addNews(@RequestParam("event") String eventJson, @RequestPart("file") MultipartFile file){
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            Event event = objectMapper.readValue(newsJson, Event.class);
+            Event event = objectMapper.readValue(eventJson, Event.class);
 
             Event savedEvent = eventService.addEvent(event,file);
             return ResponseEntity.ok(savedEvent) ;
@@ -53,7 +53,7 @@ public class EventController {
     }
 
     @GetMapping("/getAll")
-    public ResponseEntity<List<Event>> getAllNews(){
+    public ResponseEntity<List<Event>> getAllEvents(){
         List<Event> allEvents = eventService.getAllEvents() ;
         return ResponseEntity.ok(allEvents) ;
     }

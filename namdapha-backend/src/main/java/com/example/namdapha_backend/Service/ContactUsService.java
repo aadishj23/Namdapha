@@ -21,4 +21,10 @@ public class ContactUsService {
         return contactUsRepository.findAll() ;
     }
 
+    public ContactUs deleteMessage(String id){
+        ContactUs contactUs = contactUsRepository.findById(id).orElseThrow(()-> new RuntimeException("Contact Us not found with :"+id)) ;
+        contactUsRepository.deleteById(id);
+        return contactUs ;
+    }
+
 }
