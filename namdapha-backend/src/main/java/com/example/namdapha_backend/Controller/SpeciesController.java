@@ -22,11 +22,11 @@ public class SpeciesController {
     private SpeciesService speciesService ;
 
     @PostMapping("/add")
-    public ResponseEntity<Species> addNews(@RequestParam("species") String newsJson, @RequestPart("file") MultipartFile file){
+    public ResponseEntity<Species> addNews(@RequestParam("species") String speciesJson, @RequestPart("file") MultipartFile file){
 
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            Species species = objectMapper.readValue(newsJson, Species.class);
+            Species species = objectMapper.readValue(speciesJson, Species.class);
 
             Species savedspecies = speciesService.addSpecies(species,file);
             return ResponseEntity.ok(species) ;
@@ -39,9 +39,9 @@ public class SpeciesController {
     }
 
     @DeleteMapping("/delete/{speciesID}")
-    public ResponseEntity<String> deleteNews(@PathVariable String newsId){
+    public ResponseEntity<String> deleteNews(@PathVariable String speciesID){
         try{
-            speciesService.deleteSpecies(newsId);
+            speciesService.deleteSpecies(speciesID);
             return ResponseEntity.ok("Species deleted successfully") ;
         }
         catch (RuntimeException e){
