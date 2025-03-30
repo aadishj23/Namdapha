@@ -21,6 +21,7 @@ const Gallery: React.FC = () => {
   const [uploading, setUploading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -70,7 +71,9 @@ const Gallery: React.FC = () => {
           "Content-Type": "multipart/form-data",
         },
       });
-      await fetchGalleryImages(); 
+      setSuccess("Image uploaded successfully!");
+      setError(null);
+      await fetchGalleryImages();
     } catch (error) {
       setError("Upload failed");
       setTimeout(() => {
@@ -100,8 +103,9 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Error & Loading Messages */}
-      {loading && <p className="text-center text-gray-500">Loading images...</p>}
-      {error && <p className="text-center text-red-500">{error}</p>}
+      {loading && <p className="text-center text-gray-500 mt-5">Loading images...</p>}
+      {error && <p className="text-center text-red-500 mt-5">{error}</p>}
+      {success && <p className="text-center text-green-500 mt-5">{success}</p>}
 
       {/* Gallery Grid */}
       <div className="max-w-7xl mx-auto px-4 py-16" data-aos="fade-up">

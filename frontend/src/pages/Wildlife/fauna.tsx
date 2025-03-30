@@ -69,21 +69,22 @@ const Fauna = () => {
       <div className="max-w-7xl mx-auto px-4 py-16" data-aos='fade-up'>
         <div className="grid md:grid-cols-2 md:gap-10 items-center">
           <div className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer">
-          <div className="w-full md:w-1/2 pr-0 md:pr-4 relative">
-            <iframe
-              className="sm:w-[420px] sm:h-[236px] xl:w-[560px] xl:h-[315px] rounded-md mx-auto"
-              src="https://www.youtube.com/embed/AbTVMGuXP_s"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="Embedded YouTube Video"
-              style={{ 
-                zIndex: 100, 
-                position: 'relative',
-              }}
-            ></iframe>
+            <div className="w-full md:w-1/2 pr-0 md:pr-4 relative">
+              <iframe 
+                className="sm:w-[420px] sm:h-[236px] xl:w-[560px] xl:h-[315px] rounded-md mx-auto"
+                src="https://www.youtube.com/embed/AbTVMGuXP_s"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Embedded YouTube Video"
+                          style={{ 
+                            zIndex: 100, 
+                            position: 'relative',
+                          }}
+              ></iframe>
+            </div>
           </div>
-          </div>
+          
           <div>
             <p className="text-gray-600 mb-6">
               The Faunal group inhabits the soil, ground, under stone, decaying woods & grasslands representing 1890 species which have recorded so far.
@@ -100,7 +101,7 @@ const Fauna = () => {
 
         {/* Species Count */}
       <div data-aos='fade-up'>
-        <div className="mt-5 md:mt-16 px-5 flex gap-5 md:gap-20 min-h-[600px] flex-col lg:flex-row items-center justify-center md:justify-around w-screen"
+        <div className="mt-5 md:mt-16 px-5 flex gap-5 md:gap-20 min-h-[600px] flex-col lg:flex-row items-center justify-center md:justify-evenly w-screen"
           style={{
             backgroundImage: 'url("./numbersbg.svg")',
             backgroundSize: 'cover',
@@ -115,7 +116,7 @@ const Fauna = () => {
             </p>
           </div>
 
-          <div className=" mt-4 grid grid-cols-4 gap-2">
+          <div className=" mt-4 grid grid-cols-4 gap-2 md:gap-4">
             {speciesCounts.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-[#D9A87E] mb-2">{item.count}</div>

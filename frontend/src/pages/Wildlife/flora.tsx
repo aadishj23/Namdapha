@@ -96,7 +96,7 @@ const Flora = () => {
 
         {/* Species Count */}
       <div data-aos='fade-up'>
-      <div className="mt-5 md:mt-16 px-5 flex gap-5 md:gap-20 min-h-[600px] flex-col lg:flex-row items-center justify-center md:justify-around w-screen"
+      <div className="mt-5 md:mt-16 px-5 flex gap-5 md:gap-20 min-h-[600px] flex-col lg:flex-row items-center justify-center md:justify-evenly w-screen"
           style={{
             backgroundImage: 'url("./numbersbg.svg")',
             backgroundSize: 'cover',
@@ -111,7 +111,7 @@ const Flora = () => {
             </p>
           </div>
 
-          <div className=" mt-4 grid grid-cols-3 gap-2">
+          <div className="mt-4 grid grid-cols-3 gap-2 md:gap-4 lg:gap-6">
             {speciesCounts.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-[#D9A87E] mb-2">{item.count}</div>

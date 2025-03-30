@@ -45,7 +45,7 @@ const Dashboard = () => {
         {/* Sidebar */}
         <div
           className={`fixed inset-y-0 left-0 transform md:relative md:translate-x-0 w-64 bg-gray-800 text-white p-4 transition-transform duration-300 ${
-            sidebarOpen ? "translate-x-0" : "-translate-x-full"
+            sidebarOpen ? "translate-x-0 z-50" : "-translate-x-full"
           } md:block`}
         >
           <h2 className="text-xl font-bold mb-4">Admin Panel</h2>
