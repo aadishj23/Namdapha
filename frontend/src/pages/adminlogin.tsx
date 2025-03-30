@@ -22,31 +22,33 @@ function AdminLogin() {
     }
 
     async function handleSubmitSignIn(event: any) {
-        event.preventDefault()
-        setIsLoading(true)
+        event.preventDefault();
+        setIsLoading(true);
         try {
-            const response = await axios({
-                url: `${import.meta.env.VITE_BACKEND_URL}/signin`,
-                method: "POST",
-                data: JSON.stringify({
-                    email: signInData.Email,
-                    password: signInData.Password
-                }),
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-            })
-            sessionStorage.setItem('token', JSON.stringify(response.data.token))
-            sessionStorage.setItem('name', JSON.stringify(response.data.name))
-            setLoggedIn(true)
-            navigate('/admin/dashboard')
+            const formData = new URLSearchParams();
+            formData.append("email", signInData.Email);
+            formData.append("password", signInData.Password);
+    
+            const response = await axios.post(
+                `${import.meta.env.VITE_BACKEND_URL}/auth/login`,
+                formData, 
+                {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                }
+            );
+            sessionStorage.setItem('token', JSON.stringify(response.data));
+            setLoggedIn(true);
+            navigate('/admin/dashboard');
         } catch (error) {
-            console.error(error)
-            setError('Invalid Credentials')
+            console.error(error);
+            setError('Invalid Credentials');
         } finally {
-            setIsLoading(false)
+            setIsLoading(false);
         }
     }
+    
 
     return (
         <div className="signin flex justify-center items-center min-h-screen bg-gray-800">

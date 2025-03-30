@@ -26,6 +26,7 @@ const ContactMessages: React.FC = () => {
         {
           headers: {
             "Content-Type": "application/json",
+            'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`
           },
         }
       );
@@ -40,7 +41,13 @@ const ContactMessages: React.FC = () => {
   const deleteMessage = async (id: string) => {
     setSuccessMessage(null); // Clear previous success messages
     try {
-      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/contactus/delete/${id}`);
+      await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/contactus/delete/${id}`,
+        {
+          headers: {
+            'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`
+          },
+        }
+      );
       setSuccessMessage("Message deleted successfully.");
       setMessages(messages.filter((msg) => msg.id !== id));
     } catch (err) {

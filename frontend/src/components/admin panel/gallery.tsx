@@ -26,7 +26,6 @@ function Gallery() {
         headers: { "Content-Type": "application/json" },
       });
   
-      // Map the API response to match the expected structure
       const formattedImages = response.data.map((item: any) => ({
         id: item.id, 
         imageURL: item.galleryImage.imageURL,
@@ -56,13 +55,18 @@ function Gallery() {
   //   }
   // }, [selectedImage]);
 
-
   // Delete image function
   const deleteImage = async (id: string) => {
     if (!confirm("Are you sure you want to delete this image?")) return;
   
     try {
-      await axios.delete(`${API_BASE_URL}/gallery/delete/${id}`);
+      await axios.delete(`${API_BASE_URL}/gallery/delete/${id}`,
+        {
+          headers: {
+            'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`
+          },
+        }
+      );
       setImages((prevImages) => prevImages.filter((image) => image.id !== id));
     } catch (err) {
       alert("Error deleting image.");

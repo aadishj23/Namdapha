@@ -43,7 +43,13 @@ const UpcomingEvents = () => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
     setLoading(true);
     try {
-      await axios.delete(`${API_BASE_URL}/event/delete/${id}`);
+      await axios.delete(`${API_BASE_URL}/event/delete/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token") ?? "")}`,
+          },
+        }
+      );
       setSuccess("Event deleted successfully");
       setTimeout(() => setSuccess(""), 3000); 
       fetchEvents();
@@ -77,7 +83,10 @@ const UpcomingEvents = () => {
     setLoading(true);
     try {
       await axios.post(`${API_BASE_URL}/event/add`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { 
+          "Content-Type": "multipart/form-data" ,
+          'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`,
+        },
       });
       setSuccess("Event added successfully");
       fetchEvents();

@@ -67,7 +67,13 @@ const SpeciesOfWeek = () => {
 
     setLoading(true);
     try {
-      const addResponse = await axios.post(`${API_BASE_URL}/species/add`, formData);
+      const addResponse = await axios.post(`${API_BASE_URL}/species/add`, formData,
+        {
+          headers: {
+            'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`,
+          }
+        }
+      );
 
       if (addResponse.status !== 200) throw new Error("Failed to add species");
 
@@ -75,7 +81,13 @@ const SpeciesOfWeek = () => {
       setTimeout(() => setSuccess(null), 5000); 
 
       if (species?.id) {
-        axios.delete(`${API_BASE_URL}/species/delete/${species.id}`).catch((error) => {
+        axios.delete(`${API_BASE_URL}/species/delete/${species.id}`,
+          {
+            headers: {
+              'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`,
+            }
+          }
+        ).catch((error) => {
           console.error("Failed to delete previous species", error);
         });
       }
