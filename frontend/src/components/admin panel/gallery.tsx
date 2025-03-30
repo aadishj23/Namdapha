@@ -22,16 +22,26 @@ function Gallery() {
   const fetchImages = async () => {
     setLoading(true);
     try {
-      const response = await axios.get<ImageData[]>(`${API_BASE_URL}/image/fetchImages`, {
+      const response = await axios.get(`${API_BASE_URL}/gallery/all`, {
         headers: { "Content-Type": "application/json" },
       });
-      setImages(response.data);
+  
+      // Map the API response to match the expected structure
+      const formattedImages = response.data.map((item: any) => ({
+        id: item.id, 
+        imageURL: item.galleryImage.imageURL,
+        uploadedBy: item.galleryImage.uploadedBy,
+        uploadedAt: item.galleryImage.uploadedAt,
+      }));
+  
+      setImages(formattedImages);
     } catch (err) {
       setError("Failed to fetch images");
     } finally {
       setLoading(false);
     }
   };
+  
 
   useEffect(() => {
     fetchImages();
@@ -50,14 +60,15 @@ function Gallery() {
   // Delete image function
   const deleteImage = async (id: string) => {
     if (!confirm("Are you sure you want to delete this image?")) return;
-
+  
     try {
-      await axios.delete(`${API_BASE_URL}/image/delete/${id}`);
-      setImages((prevImages) => prevImages.filter((image) => image.id !== id)); // Remove deleted image
+      await axios.delete(`${API_BASE_URL}/gallery/delete/${id}`);
+      setImages((prevImages) => prevImages.filter((image) => image.id !== id));
     } catch (err) {
       alert("Error deleting image.");
     }
   };
+  
 
   return (
     <div className="p-6 max-w-7xl mx-auto">

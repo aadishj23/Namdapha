@@ -114,7 +114,7 @@ const SpeciesOfWeek = () => {
       <div className="flex justify-center mt-4">
         <button
           onClick={() => setShowForm(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+          className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition"
         >
           Replace
         </button>
