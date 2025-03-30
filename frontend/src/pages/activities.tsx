@@ -76,17 +76,17 @@ function Activities() {
             <p className="text-left md:text-center text-white mt-8">This event typically brings together naturalists, entomologists, conservationists, and butterfly enthusiasts to observe and study the rich variety of butterfly species in the Namdapha.</p>
             <div className="flex flex-col md:flex-row space-x-0 space-y-5 md:space-x-5 md:space-y-0 justify-center mx-5 md:mx-10 mt-10">
               <div className="border-[2px] border-[#569343] flex-1 rounded-lg px-5 py-5 md:px-10 md:py-10">
-                <img src="/wildlife_conservation.png" alt="conserve" className="w-12 mb-20"/>
+                <img src="/butterly_identify.png" alt="conserve" className="w-12 mb-20"/>
                 <p className="text-[#CBAC7F] font-semibold">Butterfly Identification:</p>
                 <p className="text-white">Participants explore the reserve to identify different butterfly species, some of which are rare or endemic.</p>
               </div>
               <div className="border-[2px] border-[#569343] flex-1 rounded-lg px-5 py-5 md:px-10 md:py-10">
-                <img src="/forest.png" alt="conserve" className="w-12 mb-20"/>
+                <img src="/butterfly_workshop.png" alt="conserve" className="w-12 mb-20"/>
                 <p className="text-[#CBAC7F] font-semibold">Workshops and Talks: </p>
                 <p className="text-white">Experts conduct workshops to educate attendees on butterfly conservation, their ecological roles, and the importance of preserving their habitats.</p>
               </div>
               <div className="border-[2px] border-[#569343] flex-1 rounded-lg px-5 py-5 md:px-10 md:py-10">
-                <img src="/community.png" alt="conserve" className="w-12 mb-20"/>
+                <img src="/butterfly_photo.png" alt="conserve" className="w-12 mb-20"/>
                 <p className="text-[#CBAC7F] font-semibold">Photography: </p>
                 <p className="text-white">Butterfly photography is often encouraged, allowing participants to capture the beauty of these insects and raise awareness about their importance.</p>
               </div>
