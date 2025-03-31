@@ -4,6 +4,7 @@ import { loggedin } from '../store/atoms/loggedin'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function AdminLogin() {
     const [signInData, setSignInData] = useRecoilState(signin)
@@ -44,6 +45,9 @@ function AdminLogin() {
         } catch (error) {
             console.error(error);
             setError('Invalid Credentials');
+            setTimeout(() => {
+                setError('');
+            }, 3000);
         } finally {
             setIsLoading(false);
         }
@@ -85,9 +89,12 @@ function AdminLogin() {
                     name="Password"
                     value={signInData.Password}
                     onChange={handleChangeSignIn}
-                    className="w-full px-3 py-2 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                     required
                 />
+                <Link to="/admin/forgot-password">
+                    <p className='my-2'> Forgot Password? </p>
+                </Link>
                 {error && (
                     <p className="text-red-500 mb-4">{error}</p>
                 )}

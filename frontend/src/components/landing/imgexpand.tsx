@@ -30,6 +30,7 @@ const HoverExpandGallery: React.FC = () => {
   return (
     <div
         className="min-h-[400px] lg:min-h-[700px] relative pb-10"
+        data-aos='fade-up-right'
         style={{
         backgroundImage: 'url("./shadeup.png")',
         backgroundSize: 'cover',

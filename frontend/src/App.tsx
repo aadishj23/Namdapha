@@ -22,6 +22,7 @@ import AboutUs from './pages/aboutus'
 import ErrorPage from './pages/errorpage'
 import Footer from './components/footer'
 import ScrollToTop from './ScrollToTop'
+import Forgotpassword from './pages/forgotpassword'
 import AdminLogin from './pages/adminlogin'
 import { ReactNode } from 'react'
 
@@ -76,6 +77,7 @@ const App = () => {
             <Route path='/about' element={<AboutUs />} />
             <Route path='*' element={<ErrorPage />} />
             <Route path='/admin' element={<AdminLogin />} />
+            <Route path='/admin/forgot-password' element={<Forgotpassword />} />
             
             {/* Protected Route for Dashboard */}
             <Route path='/admin/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />

@@ -70,3 +70,18 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+
+
+@keyframes animal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-animal {
+  animation: animal 20s linear infinite;
+}
