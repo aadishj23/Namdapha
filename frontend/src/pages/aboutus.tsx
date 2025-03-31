@@ -61,22 +61,20 @@ function AboutUs() {
 
 
       {/* 2nd Section */}
-      <div className="min-h-[700px] md:min-h-[600px] w-screen"
+      <div className="min-h-[520px] md:min-h-[600px] w-screen"
           style={{
             backgroundImage: 'url("./numbersbg.svg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}>
-          <h1 className="text-[#F1AA39] font-bold text-2xl md:text-4xl text-center w-full md:w-3/5 mx-auto pt-20 md:pt-36 mb-5">Namdapha National Park & Tiger Reserve has three wildlife ranges which are</h1>
+          <h1 className="text-[#F1AA39] font-bold text-2xl md:text-4xl text-center w-full md:w-3/5 mx-auto pt-20 md:pt-44 mb-5">Namdapha National Park & Tiger Reserve has three wildlife ranges which are</h1>
           <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-4 text-[#CBAC7F] items-center font-semibold text-md md:text-lg">
             <p>1. Miao Wildlife Range</p>
             <p>2. Namdapha Wildlife Range</p>
             <p>3. Gandhigram Wildlife Range</p>
           </div>
           <br />
-          <p className="text-white w-full md:w-3/5 mx-auto px-5 md:px-0">It shares the international boundary with Myanmar in East and South; with Kamlang Tiger Reserve in North; with Nampong forest division in South-West and in South-East; with Diyun RF of Nampong forest division in North-west. 157km long Miao-Vijoynagar road cuts through the park being only motorable road.</p>
-          <br />
-          <p className="text-white w-full md:w-3/5 mx-auto px-5 md:px-0">It shares the international boundary with Myanmar in East and South; with Kamlang Tiger Reserve in North; with Nampong forest division in South-West and in South-East; with Diyun RF of Nampong forest division in North-west. 157km long Miao-Vijoynagar road cuts through the park being only motorable road.</p>
+          <p className="text-white w-full md:w-3/5 mx-auto px-5 md:px-0 text-center">It shares the international boundary with Myanmar in East and South; with Kamlang Tiger Reserve in North; with Nampong forest division in South-West and in South-East; with Diyun RF of Nampong forest division in North-west. 157km long Miao-Vijoynagar road cuts through the park being only motorable road.</p>
       </div>
 
 
