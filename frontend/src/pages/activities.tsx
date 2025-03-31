@@ -37,7 +37,7 @@ function Activities() {
           </div>
 
           {/* Content Section 2 */}
-          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-20 mb-40">
+          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-20 mb-60 md:mb-40">
             <div className="w-full flex flex-col justify-center flex-1 pr-10 ">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Tiger Monitoring Exercise</h1>
               <p className="mb-3 text-[#535353]"><b>Camera Traps:</b>  A network of camera traps is used across the park to capture images and monitor the movement and behaviour of Tigers, co-predators & herbivores, helping to assess their population and distribution.</p>
@@ -51,7 +51,7 @@ function Activities() {
                 <img 
                   src="./Rectangle.png" 
                   alt="Activity 1" 
-                  className="absolute top-0 left-10 md:left-0 w-full rounded-2xl object-cover float-right"
+                  className="absolute top-10 md:top-0 left-10 md:left-0 w-full rounded-2xl object-cover float-right"
                 />
                 
                 {/* Front Image (Shifted Down & Overlapping) */}
@@ -111,14 +111,14 @@ function Activities() {
             </div>
 
           {/* Content Section 3 */}
-          <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 md:px-20 mb-32">
+          <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 md:px-20 mb-60 md:mb-32">
             <div className="relative flex items-center justify-start px-10 my-10 md:my-0">
               <div className="relative w-full md:w-[480px] md:h-[320px] ">
                 {/* Back Image (Shifted to the Left) */}
                 <img 
                   src="./Rectangle.png" 
                   alt="Activity 1" 
-                  className="absolute top-0 right-10 md:right-20 w-full rounded-2xl object-cover"
+                  className="absolute top-10 md:top-0 right-10 md:right-20 w-full rounded-2xl object-cover"
                 />
                 
                 {/* Front Image (Shifted Down & Overlapping) */}
@@ -139,7 +139,7 @@ function Activities() {
 
 
           {/* Content Section 4 */}
-          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-48 md:mt-60 pb-52 md:pb-44">
+          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-48 md:mt-60 pb-60 md:pb-52">
             <div className="w-full md:w-1/2 flex flex-col justify-center flex-1 md:pr-40">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Eco-Development Activities</h1>
               <p className="mb-3 text-[#535353]">The Namdapha National Park & Tiger Reserve authority engages in various eco-development activities to support local communities while promoting environmental sustainability. These initiatives include:</p>
@@ -155,7 +155,7 @@ function Activities() {
                 <img 
                   src="./Rectangle.png" 
                   alt="Activity 1" 
-                  className="absolute top-0 left-10 md:left-10 w-full rounded-2xl object-cover"
+                  className="absolute top-10 md:top-0 left-10 md:left-10 w-full rounded-2xl object-cover"
                 />
                 
                 {/* Front Image (Shifted Down & Overlapping) */}

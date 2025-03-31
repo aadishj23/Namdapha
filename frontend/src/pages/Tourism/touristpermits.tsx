@@ -38,13 +38,13 @@ function TouristPermits() {
             <div className="flex flex-col md:flex-row gap-4 md:gap-10 mt-10">
               <div className="flex flex-col gap-4">
                 <div className="flex gap-3 items-start flex-1">
-                  <h1 className="bg-[#D9D9D9] px-3 py-1 rounded-full font-extrabold text-[#535353]">1</h1>
+                  <h1 className="bg-[#395903] px-3 py-1 rounded-full font-extrabold text-white">1</h1>
                   <div className="md:py-1">
                     <h2 className="text-[#F3454F] font-bold text-xl w-4/5">Govt. of India, Ministry of Home Affairs, New Delhi</h2>
                   </div>
                 </div>
                 <div className="flex gap-3 items-start">
-                  <h1 className="bg-[#D9D9D9] px-3 py-1 rounded-full font-extrabold text-[#535353]">2</h1>
+                  <h1 className="bg-[#395903] px-3 py-1 rounded-full font-extrabold text-white">2</h1>
                   <div>
                     <h2 className="text-[#F3454F] font-bold text-xl ">The Secretary (Tourism)</h2>
                     <p>Govt. of Arunachal Pradesh</p>
@@ -55,7 +55,7 @@ function TouristPermits() {
               </div>
               <div className="flex flex-col gap-4">
               <div className="flex gap-3 items-start">
-                  <h1 className="bg-[#D9D9D9] px-3 py-1 rounded-full font-extrabold text-[#535353]">3</h1>
+                  <h1 className="bg-[#395903] px-3 py-1 rounded-full font-extrabold text-white">3</h1>
                   <div>
                     <h2 className="text-[#F3454F] font-bold text-xl ">The Resident Commissioner</h2>
                     <p> Govt. of Arunachal Pradesh, Kautilya Marg,</p>
@@ -64,7 +64,7 @@ function TouristPermits() {
                   </div>
                 </div>
                 <div className="flex gap-3 items-start">
-                  <h1 className="bg-[#D9D9D9] px-3 py-1 rounded-full font-extrabold text-[#535353]">4</h1>
+                  <h1 className="bg-[#395903] px-3 py-1 rounded-full font-extrabold text-white">4</h1>
                   <div>
                     <h2 className="text-[#F3454F] font-bold text-xl ">The Commissioner(Home)</h2>
                     <p> Govt. of Arunachal Pradesh</p>
@@ -86,7 +86,7 @@ function TouristPermits() {
             <div className="flex flex-col md:flex-row gap-4 md:gap-10 mt-10">
               <div className="flex flex-col md:flex-row gap-4 md:gap-40">
                 <div className="flex gap-3 items-start flex-1">
-                  <h1 className="bg-[#D9D9D9] px-3 py-1 rounded-full font-extrabold text-[#535353]">1</h1>
+                  <h1 className="bg-[#395903] px-3 py-1 rounded-full font-extrabold text-white">1</h1>
                   <div>
                     <h2 className="text-[#F3454F] font-bold text-xl">Required documents (Indian tourist):</h2>
                     <p>1) Aadhar Card</p>
@@ -97,7 +97,7 @@ function TouristPermits() {
                   </div>
                 </div>
                 <div className="flex gap-3 items-start">
-                  <h1 className="bg-[#D9D9D9] px-3 py-1 rounded-full font-extrabold text-[#535353]">2</h1>
+                  <h1 className="bg-[#395903] px-3 py-1 rounded-full font-extrabold text-white">2</h1>
                   <div>
                     <h2 className="text-[#F3454F] font-bold text-xl">Required documents (Foreign tourist):</h2>
                     <p>1) Passport</p>
