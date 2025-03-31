@@ -93,7 +93,7 @@ function Activities() {
             </div>
           </div>
 
-            <div className="relative w-screen overflow-hidden mb-40 mt-0">
+            <div className="relative w-screen overflow-hidden mb-10 md:mb-20 mt-0">
             {/* Infinite Scrolling Animation for Desktop and Mobile */}
             <div className="flex w-screen overflow-hidden">
               <div className="flex w-[400%] animate-animal">
@@ -139,7 +139,7 @@ function Activities() {
 
 
           {/* Content Section 4 */}
-          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-52 pb-52 md:pb-44">
+          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-48 md:mt-60 pb-52 md:pb-44">
             <div className="w-full md:w-1/2 flex flex-col justify-center flex-1 md:pr-40">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Eco-Development Activities</h1>
               <p className="mb-3 text-[#535353]">The Namdapha National Park & Tiger Reserve authority engages in various eco-development activities to support local communities while promoting environmental sustainability. These initiatives include:</p>
