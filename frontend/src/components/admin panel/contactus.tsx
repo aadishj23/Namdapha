@@ -49,9 +49,11 @@ const ContactMessages: React.FC = () => {
         }
       );
       setSuccessMessage("Message deleted successfully.");
+      setTimeout(() => setSuccessMessage(null), 3000); 
       setMessages(messages.filter((msg) => msg.id !== id));
     } catch (err) {
       setError("Failed to delete message");
+      setTimeout(() => setError(null), 3000);
     }
   };
 

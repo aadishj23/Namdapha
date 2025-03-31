@@ -100,6 +100,7 @@ const SpeciesOfWeek = () => {
     } catch (error) {
       console.error("Error updating species", error);
       setError("Failed to update species.");
+      setTimeout(() => setError(null), 5000);
     } finally {
       setLoading(false);
     }

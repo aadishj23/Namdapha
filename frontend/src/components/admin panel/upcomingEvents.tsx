@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
-import { Trash2Icon, UploadIcon } from "lucide-react";
+import { Trash2Icon, UploadIcon, EditIcon } from "lucide-react";
 
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -18,6 +18,7 @@ const UpcomingEvents = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [editingEvent, setEditingEvent] = useState<EventItem | null>(null);
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
   const [newDate, setNewDate] = useState("");
@@ -43,18 +44,17 @@ const UpcomingEvents = () => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
     setLoading(true);
     try {
-      await axios.delete(`${API_BASE_URL}/event/delete/${id}`,
-        {
-          headers: {
-            Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token") ?? "")}`,
-          },
-        }
-      );
+      await axios.delete(`${API_BASE_URL}/event/delete/${id}`, {
+        headers: {
+          Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token") ?? "")}`,
+        },
+      });
       setSuccess("Event deleted successfully");
-      setTimeout(() => setSuccess(""), 3000); 
+      setTimeout(() => setSuccess(""), 3000);
       fetchEvents();
     } catch (err) {
       setError("Failed to delete event");
+      setTimeout(() => setError(""), 3000);
     } finally {
       setLoading(false);
     }
@@ -64,42 +64,59 @@ const UpcomingEvents = () => {
     if (event.target.files) setFile(event.target.files[0]);
   };
 
-  const handleAddEvent = async () => {
+  const handleAddOrUpdateEvent = async () => {
     if (!newTitle || !newBody || !newDate || !file) {
       setError("All fields are required!");
+      setTimeout(() => setError(""), 3000);
       return;
     }
-  
-    const eventData = JSON.stringify({
-      title: newTitle,
-      body: newBody,
-      date: newDate,
-    });
-  
+
     const formData = new FormData();
-    formData.append("event", eventData); 
+    formData.append("event", JSON.stringify({ title: newTitle, body: newBody, date: newDate }));
     formData.append("file", file);
-  
+
     setLoading(true);
     try {
       await axios.post(`${API_BASE_URL}/event/add`, formData, {
-        headers: { 
-          "Content-Type": "multipart/form-data" ,
-          'Authorization': `Bearer ${JSON.parse(sessionStorage.getItem('token') ?? '')}`,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token") ?? "")}`,
         },
       });
-      setSuccess("Event added successfully");
+
+      if (editingEvent) {
+        await axios.delete(`${API_BASE_URL}/event/delete/${editingEvent.id}`, {
+          headers: {
+            Authorization: `Bearer ${JSON.parse(sessionStorage.getItem("token") ?? "")}`,
+          },
+        });
+        setSuccess("Event updated successfully");
+        setTimeout(() => setSuccess(""), 3000);
+      } else {
+        setSuccess("Event added successfully");
+        setTimeout(() => setSuccess(""), 3000);
+      }
+
       fetchEvents();
+      setEditingEvent(null);
       setNewTitle("");
       setNewBody("");
       setNewDate("");
       setFile(null);
     } catch (err) {
-      setError("Failed to add event");
+      setError("Failed to add/update event");
+      setTimeout(() => setError(""), 3000);
     } finally {
       setLoading(false);
     }
-  };  
+  };
+
+  const handleEdit = (item: EventItem) => {
+    setEditingEvent(item);
+    setNewTitle(item.title);
+    setNewBody(item.body);
+    setNewDate(item.date);
+  };
 
   return (
     <div className="max-w-5xl mx-auto p-6">
@@ -109,7 +126,7 @@ const UpcomingEvents = () => {
       {error && <p className="bg-red-100 text-red-800 p-2 rounded">{error}</p>}
 
       <div className="bg-gray-100 p-4 rounded mb-6">
-        <h2 className="text-xl font-bold mb-2">Add Event</h2>
+        <h2 className="text-xl font-bold mb-2">{editingEvent ? "Edit Event" : "Add Event"}</h2>
         <input
           type="text"
           placeholder="Title"
@@ -130,8 +147,8 @@ const UpcomingEvents = () => {
           className="w-full p-2 border rounded mb-2"
         />
         <input type="file" onChange={handleFileChange} className="mb-2" />
-        <Button onClick={handleAddEvent} disabled={loading}>
-          {loading ? "Adding..." : "Add Event"}
+        <Button onClick={handleAddOrUpdateEvent} disabled={loading}>
+          {loading ? (editingEvent ? "Updating..." : "Adding...") : (editingEvent ? "Update Event" : "Add Event")}
           <UploadIcon className="ml-2 w-4 h-4" />
         </Button>
       </div>
@@ -152,10 +169,14 @@ const UpcomingEvents = () => {
                   <p className="text-gray-700 text-sm line-clamp-2">{item.body}</p>
                 </div>
               </div>
-              <div className="mt-4">
+              <div className="mt-4 flex gap-2">
                 <Button variant="destructive" onClick={() => handleDelete(item.id)}>
                   Delete
                   <Trash2Icon className="ml-2 w-4 h-4" />
+                </Button>
+                <Button variant="outline" onClick={() => handleEdit(item)}>
+                  Edit
+                  <EditIcon className="ml-2 w-4 h-4" />
                 </Button>
               </div>
             </div>
