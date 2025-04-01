@@ -27,7 +27,7 @@ function TouristActivities() {
         </div>
 
           <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 mt-10">
-            <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
+            <img src="./Tour-Act/1.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Rainforest experience trek</h1>
               <p className="mb-3 text-[#535353]">Get rejuvenated walking through the Indian Biodiversity Hotspot, a nature's oxygen factory & home to critically endangered and endemic wildlife.</p>
@@ -43,10 +43,10 @@ function TouristActivities() {
                 <img src='./Rectangle.png' alt='img1' className="w-32 md:w-40 rounded-lg"/>
               </div>
             </div>
-            <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
+            <img src="./Tour-Act/2.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
           </div>
           <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 mt-10 md:mt-20">
-            <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
+            <img src="./Tour-Act/3.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Oxygen bath & Forest Meditation</h1>
               <p className="mb-3 text-[#535353]">Oxygen Bath: Namdapha's pristine forests provide a natural "oxygen bath," where the fresh, pure air rejuvenates both body and mind, promoting relaxation and vitality.</p>

@@ -37,7 +37,7 @@ function Activities() {
           </div>
 
           {/* Content Section 2 */}
-          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-20 mb-60 md:mb-40">
+          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-20 mb-60 md:mb-52">
             <div className="w-full flex flex-col justify-center flex-1 pr-10 ">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Tiger Monitoring Exercise</h1>
               <p className="mb-3 text-[#535353]"><b>Camera Traps:</b>  A network of camera traps is used across the park to capture images and monitor the movement and behaviour of Tigers, co-predators & herbivores, helping to assess their population and distribution.</p>
@@ -58,7 +58,7 @@ function Activities() {
                 <img 
                   src="./Activities/Section2-2.png" 
                   alt="Activity 1" 
-                  className="absolute -bottom-40 -left-10 md:-left-40 w-full rounded-2xl object-cover"
+                  className="absolute -bottom-40 md:-bottom-60 -left-10 md:-left-40 w-full rounded-2xl object-cover"
                 />
               </div>
             </div>
@@ -125,7 +125,7 @@ function Activities() {
                 <img 
                   src="./Activities/Section3-2.png" 
                   alt="Activity 1" 
-                  className="absolute -bottom-40 left-10 w-full rounded-2xl object-cover"
+                  className="absolute -bottom-40 md:-bottom-60 left-10 w-full rounded-2xl object-cover"
                 />
               </div>
             </div>
@@ -139,7 +139,7 @@ function Activities() {
 
 
           {/* Content Section 4 */}
-          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-48 md:mt-60 pb-60 md:pb-52">
+          <div className="flex flex-col md:flex-row justify-center gap-6 px-10 md:px-20 mt-48 md:mt-72 pb-60 md:pb-52">
             <div className="w-full md:w-1/2 flex flex-col justify-center flex-1 md:pr-40">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Eco-Development Activities</h1>
               <p className="mb-3 text-[#535353]">The Namdapha National Park & Tiger Reserve authority engages in various eco-development activities to support local communities while promoting environmental sustainability. These initiatives include:</p>
@@ -162,7 +162,7 @@ function Activities() {
                 <img 
                   src="./Activities/Section4-2.png" 
                   alt="Activity 1" 
-                  className="absolute -bottom-40 -left-10 md:-left-40 w-full rounded-2xl object-cover"
+                  className="absolute -bottom-40 md:-bottom-60 -left-10 md:-left-40 w-full rounded-2xl object-cover"
                 />
               </div>
             </div>

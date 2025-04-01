@@ -87,10 +87,10 @@ function AboutUs() {
               <br />
               <b>The rainforest of Namdapha is the northern most extent in the globe.</b>
             </div>
-            <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
+            <img src="./AboutUS/1.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
           </div>
       <div className="flex flex-col-reverse md:flex-row justify-center gap-6 px-10 mt-10 md:mt-16 pb-20">
-            <img src="./Rectangle.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
+            <img src="./AboutUS/2.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-0 md:px-10">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Management Objectives</h1>
               <p className="mb-3 text-[#535353]">For providing total protection to Namdapha to ensure maintenance of minimum viable population of Tiger for Scientific, Aesthetic, Cultural & Ecological values.</p>

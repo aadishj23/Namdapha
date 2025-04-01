@@ -5,25 +5,25 @@ import "aos/dist/aos.css";
 const features = [
     {
       title: "Untouched Wilderness",
-      image: "/animal1.png",
+      image: "/Guide/1.png",
       description:
         "The park is relatively remote and less commercialized, offering a more raw and authentic experience of nature. It is a perfect destination for those seeking solitude and an unspoiled natural environment.",
     },
     {
       title: "Trekkers' Paradise",
-      image: "/animal1.png",
+      image: "/Guide/2.png",
       description:
         "The park is relatively remote and less commercialized, offering a more raw and authentic experience of nature. It is a perfect destination for those seeking solitude and an unspoiled natural environment.",
     },
     {
       title: "Conservation Efforts",
-      image: "/animal1.png",
+      image: "/Guide/3.png",
       description:
         "Visiting the park supports its conservation initiatives, helping protect endangered species and fragile ecosystems in the region.",
     },
     {
       title: "Wildlife Watching",
-      image: "/animal1.png",
+      image: "/Guide/4.png",
       description:
         "The park is a haven for birdwatchers, with many migratory and endemic bird species to spot. You can also spot the Nocturnal Red Giant Gliding Squirrel, only ape species in India & Arunachal Pradesh’s state animal Hoolock Gibbon, Capped Langurs, Yellow Throated Martens and many other wildlife.",
     },
