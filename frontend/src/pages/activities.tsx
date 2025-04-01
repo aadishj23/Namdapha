@@ -12,9 +12,9 @@ function Activities() {
       <div className="min-h-screen bg-[#F5F1EE]" data-aos='zoom-out'>
         {/* Hero Section */}
         <div 
-          className="min-h-[600px] relative flex items-center justify-center"
+          className="min-h-[700px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./flowerbanner.png")',
+            backgroundImage: 'url("./banners/Activities_banner.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -49,14 +49,14 @@ function Activities() {
               <div className="relative w-full md:w-[480px] md:h-[320px] ">
                 {/* Back Image (Shifted to the Right) */}
                 <img 
-                  src="./Rectangle.png" 
+                  src="./Activities/Section2-1.png" 
                   alt="Activity 1" 
                   className="absolute top-10 md:top-0 left-10 md:left-0 w-full rounded-2xl object-cover float-right"
                 />
                 
                 {/* Front Image (Shifted Down & Overlapping) */}
                 <img 
-                  src="./Rectangle.png" 
+                  src="./Activities/Section2-2.png" 
                   alt="Activity 1" 
                   className="absolute -bottom-40 -left-10 md:-left-40 w-full rounded-2xl object-cover"
                 />
@@ -116,14 +116,14 @@ function Activities() {
               <div className="relative w-full md:w-[480px] md:h-[320px] ">
                 {/* Back Image (Shifted to the Left) */}
                 <img 
-                  src="./Rectangle.png" 
+                  src="./Activities/Section3-1.png" 
                   alt="Activity 1" 
                   className="absolute top-10 md:top-0 right-10 md:right-20 w-full rounded-2xl object-cover"
                 />
                 
                 {/* Front Image (Shifted Down & Overlapping) */}
                 <img 
-                  src="./Rectangle.png" 
+                  src="./Activities/Section3-2.png" 
                   alt="Activity 1" 
                   className="absolute -bottom-40 left-10 w-full rounded-2xl object-cover"
                 />
@@ -153,14 +153,14 @@ function Activities() {
               <div className="relative w-full md:w-[480px] md:h-[320px]">
                 {/* Back Image (Shifted to the Right) */}
                 <img 
-                  src="./Rectangle.png" 
+                  src="./Activities/section4-1.png" 
                   alt="Activity 1" 
                   className="absolute top-10 md:top-0 left-10 md:left-10 w-full rounded-2xl object-cover"
                 />
                 
                 {/* Front Image (Shifted Down & Overlapping) */}
                 <img 
-                  src="./Rectangle.png" 
+                  src="./Activities/Section4-2.png" 
                   alt="Activity 1" 
                   className="absolute -bottom-40 -left-10 md:-left-40 w-full rounded-2xl object-cover"
                 />

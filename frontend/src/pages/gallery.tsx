@@ -63,10 +63,13 @@ const Gallery: React.FC = () => {
         },
       });
       setSuccess("Image uploaded successfully!");
+      setTimeout(() => {
+        setSuccess(null);
+      }, 5000);
       setError(null);
       await fetchGalleryImages();
     } catch (error) {
-      setError("Upload failed");
+      setError("Upload failed.Please Choose image less than 10MB");
       setTimeout(() => {
         setError(null);
       }, 5000);
@@ -80,7 +83,7 @@ const Gallery: React.FC = () => {
       <div
         className="min-h-[600px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./flowerbanner.png")',
+          backgroundImage: 'url("./banners/Gallery_banner.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

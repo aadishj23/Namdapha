@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect ,useState} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
+
+const images=[
+  './hero_banner/hero1.png',
+  './hero_banner/hero2.png',
+  './hero_banner/hero3.png',
+]
 
 const HeroSection = () => {
 
@@ -9,14 +15,24 @@ const HeroSection = () => {
     AOS.init({ duration: 1000, once: true }); 
   }, []);
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); 
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative h-screen" data-aos="fade-up">
       <div 
-        className="absolute inset-0 min-h-[900px] "
+        className="absolute inset-0 min-h-[900px] transition-all duration-1000 "
         style={{
-          backgroundImage: `url('./heroimage.svg')`,
+          backgroundImage: `url(${images[currentIndex]})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          transition: "background-image 1s ease-in-out",
         }}
       />
       

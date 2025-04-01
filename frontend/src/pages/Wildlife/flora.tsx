@@ -53,7 +53,7 @@ const Flora = () => {
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./flowerbanner.png")',
+          backgroundImage: 'url("./banners/flora_banner.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
