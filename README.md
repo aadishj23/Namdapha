@@ -1,2 +1,2 @@
 # Namdapha
-- Website - https://namdapha.aadish.tech/
+- Website - https://namdapha-axuo.vercel.app/
