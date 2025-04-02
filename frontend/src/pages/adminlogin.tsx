@@ -6,6 +6,8 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
+
 function AdminLogin() {
     const [signInData, setSignInData] = useRecoilState(signin)
     const setLoggedIn = useSetRecoilState(loggedin)
@@ -27,7 +29,7 @@ function AdminLogin() {
         setIsLoading(true);
         try {
             const formData = new URLSearchParams();
-            formData.append("email", signInData.Email);
+            formData.append("email", ADMIN_EMAIL);
             formData.append("password", signInData.Password);
     
             const response = await axios.post(
@@ -60,7 +62,7 @@ function AdminLogin() {
                 className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm"
                 onSubmit={handleSubmitSignIn}
             >
-                <label
+                {/* <label
                     htmlFor="email"
                     className="block text-gray-700 text-sm font-bold mb-2"
                 >
@@ -75,7 +77,7 @@ function AdminLogin() {
                     onChange={handleChangeSignIn}
                     className="w-full px-3 py-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                     required
-                />
+                /> */}
                 <label
                     htmlFor="pswd"
                     className="block text-gray-700 text-sm font-bold mb-2"

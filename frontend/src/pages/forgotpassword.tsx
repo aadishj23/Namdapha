@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
-const ADMIN_EMAIL = "parthnepalia03@gmail.com";
+const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
 
 function ForgotPassword() {
   const [otp, setOtp] = useState("");
