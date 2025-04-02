@@ -6,9 +6,9 @@ import "aos/dist/aos.css";
 const imageItems = [
   "animal1.png",
   "animal2.png",
-  "animal2.png",
   "animal3.png",
   "animal4.png",
+  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483216/gallery/dlznlzrrx4scauzvkxce.jpg",
 ];
 
 const AnimalImages = () => {

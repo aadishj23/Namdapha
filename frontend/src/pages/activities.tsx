@@ -97,15 +97,14 @@ function Activities() {
             {/* Infinite Scrolling Animation for Desktop and Mobile */}
             <div className="flex w-screen overflow-hidden">
               <div className="flex w-[400%] animate-animal">
-              <img src="./animal1.png" alt="animal1" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              <img src="./animal2.png" alt="animal2" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              <img src="./animal3.png" alt="animal3" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              <img src="./animal4.png" alt="animal4" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              {/* Duplicate elements for seamless animation */}
-              <img src="./animal1.png" alt="animal1" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              <img src="./animal2.png" alt="animal2" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              <img src="./animal3.png" alt="animal3" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
-              <img src="./animal4.png" alt="animal4" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483208/gallery/qwsxnnkl5qkldw9kmgli.jpg" alt="animal1" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483060/gallery/dfmeny0bd9ujw9w8f6kv.jpg" alt="animal2" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483005/gallery/ujmhqe79hzud2e05u4mi.jpg" alt="animal3" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483012/gallery/qxhmmwwsgvx2kpoooktt.jpg" alt="animal4" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482981/gallery/nimkijscsgckauajcgat.jpg" alt="animal1" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482883/gallery/dcxnsxzbebta2t4437rv.jpg" alt="animal2" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482874/gallery/jhdrj7udnpr2vpf9x7jz.jpg" alt="animal3" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
+              <img src="https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482891/gallery/xvbhb8xot5fieyabgdwk.jpg" alt="animal4" className="w-screen md:w-1/4 h-[400px] md:h-[600px] object-cover" />
               </div>
             </div>
             </div>

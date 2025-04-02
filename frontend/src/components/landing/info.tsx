@@ -26,12 +26,12 @@ const CardInfo = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-10 xl:px-40">
           {actions.map((action, index) => (
             <div key={index} className="z-10 bg-white rounded-xl p-6 py-10 flex flex-col items-center shadow-lg border-[#467837] border-4">
-              <img src={action.icon} alt={action.title} />
+              <img src={action.icon} alt={action.title} className='h-full'/>
               <h3 className="text-lg font-semibold my-4">{action.title}</h3>
               <Link to={action.href} className="text-green-800 font-bold hover:text-green-900 transition-colors">
-              <button className="bg-orange-400 text-black px-6 py-1 font-bold rounded-xl hover:bg-orange-500 transition-colors">
-                {action.buttontext}
-              </button>
+                <button className="bg-orange-400 text-black px-6 py-1 font-bold rounded-xl hover:bg-orange-500 transition-colors ">
+                  {action.buttontext}
+                </button>
               </Link>
             </div>
           ))}

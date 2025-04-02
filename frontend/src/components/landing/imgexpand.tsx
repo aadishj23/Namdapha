@@ -4,11 +4,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images: string[] = [
-  "/animal1.png",
-  "/animal2.png",
-  "/animal3.png", 
-  "/animal4.png",
-  "/animal4.png",
+  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483132/gallery/danhca7gwm3lfgyqhvow.jpg",
+  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483114/gallery/zo8shsaylid5a0u3vhll.jpg",
+  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483222/gallery/qpba3rhw1jrm5d3ykt71.jpg", 
+  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482988/gallery/umeo476h2lkbkpagmcyc.jpg",
+  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482997/gallery/zxcbqqhhlyl0lki1p9do.jpg",
 ];
 
 const HoverExpandGallery: React.FC = () => {

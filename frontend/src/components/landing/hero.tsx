@@ -49,9 +49,11 @@ const HeroSection = () => {
         </p>
         
         <div className="flex gap-4 ">
-          <button className="bg-[#F1AA39] text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition-colors">
-            Read More
-          </button>
+          <Link to='/about'>
+            <button className="bg-[#F1AA39] text-black px-6 py-2 rounded-xl hover:bg-yellow-500 transition-colors">
+              Read More
+            </button>
+          </Link>
           <Link to='/donation'>
             <button className="bg-transparent border border-white px-6 py-2 rounded-xl hover:bg-white/10 transition-colors">
               Donate Now
