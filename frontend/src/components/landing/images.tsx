@@ -8,7 +8,7 @@ const imageItems = [
   "animal2.png",
   "animal3.png",
   "animal4.png",
-  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483216/gallery/dlznlzrrx4scauzvkxce.jpg",
+  "https://res.cloudinary.com/dedbhiqna/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1744381806/dlznlzrrx4scauzvkxce_nigezv.jpg",
 ];
 
 const AnimalImages = () => {

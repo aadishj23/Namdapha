@@ -1,4 +1,3 @@
-import { Button } from "../../components/ui/button";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -24,20 +23,36 @@ const speciesCounts: SpeciesCount[] = [
 
 const floraItems: FaunaItem[] = [
   {
-    name: "Tecca Sp",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381775/Frame_1618873169_sy9ul4_omfxpp.png"
   },
   {
-    name: "Aconitum napellus",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381775/Frame_1618873170_yaseei_ijy8li.png"
   },
   {
-    name: "Esmeralda",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381775/Frame_1618873171_fxwcxr_zobx3a.png"
   },
   {
-    name: "Tecca Sp",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381775/Frame_1618873172_l76yn9_yc6ua3.png"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381775/Frame_1618873169_1_hrnftx_rk7rm5.png"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381775/Frame_1618873169_2_kljirr_nrespr.png"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381776/Frame_1618873202_tjxde8_xvh31u.png"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381776/Frame_1618873201_jj2meo_cpfdk9.png"
   },
 ];
 
@@ -123,7 +138,7 @@ const Flora = () => {
       </div>
 
         {/* Flora Gallery */}
-      <div className="max-w-7xl mx-auto px-4 py-16" data-aos='fade-up'>
+      <div className="max-w-7xl mx-auto px-4 pb-16" data-aos='fade-up'>
         <div className="mt-24">
           <h2 className="text-3xl font-bold mb-12 text-center text-[#569343]">Flora in Namdapha</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -137,11 +152,6 @@ const Flora = () => {
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-center mb-3">{item.name}</h3>
-                <div className="text-center">
-                  <Button variant="outline" size="sm" className="border-[#395903] text-[#395903] rounded-xl px-5">
-                    See More
-                  </Button>
-                </div>
               </div>
             ))}
           </div>

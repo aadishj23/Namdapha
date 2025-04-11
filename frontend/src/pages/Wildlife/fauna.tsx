@@ -1,4 +1,3 @@
-import { Button } from "../../components/ui/button";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,20 +25,36 @@ const speciesCounts: SpeciesCount[] = [
 
 const faunaItems: FaunaItem[] = [
   {
-    name: "Tecca Sp",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384184/1._Sultan_Tit_wair1o.jpg"
   },
   {
-    name: "Aconitum napellus",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384183/Rufos_necked_Hornbill_ushxnb.jpg"
   },
   {
-    name: "Esmeralda",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384184/Crested_Kingfisher_o9umzs.jpg"
   },
   {
-    name: "Tecca Sp",
-    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=2070&auto=format&fit=crop"
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384183/White_bellied_Heron_nnjy3e.png"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384182/Crimson-backed_Sunbird_1_xmyvud.jpg"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384181/Black_Kite_prewux.jpg"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384180/Auesten_s_Brown_Hornbill_kg3gb1.jpg"
+  },
+  {
+    name: "Name",
+    image: "https://res.cloudinary.com/dedbhiqna/image/upload/v1744384180/_MHV1542_1_rnxf3j.jpg"
   },
 ];
 
@@ -142,11 +157,6 @@ const Fauna = () => {
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-center mb-3">{item.name}</h3>
-                <div className="text-center">
-                  <Button variant="outline" size="sm" className="border-[#395903] text-[#395903] rounded-xl px-5">
-                    See More
-                  </Button>
-                </div>
               </div>
             ))}
           </div>

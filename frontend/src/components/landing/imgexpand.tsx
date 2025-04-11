@@ -5,11 +5,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images: string[] = [
-  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483132/gallery/danhca7gwm3lfgyqhvow.jpg",
-  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483114/gallery/zo8shsaylid5a0u3vhll.jpg",
-  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743483222/gallery/qpba3rhw1jrm5d3ykt71.jpg", 
-  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482988/gallery/umeo476h2lkbkpagmcyc.jpg",
-  "https://res.cloudinary.com/dvkaw9avd/image/upload/v1743482997/gallery/zxcbqqhhlyl0lki1p9do.jpg",
+  "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381803/danhca7gwm3lfgyqhvow_cao4zh.jpg",
+  "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381807/zo8shsaylid5a0u3vhll_wlzznh.jpg",
+  "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381805/qpba3rhw1jrm5d3ykt71_auzqvf.jpg", 
+  "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381806/umeo476h2lkbkpagmcyc_bxfmt0.jpg",
+  "https://res.cloudinary.com/dedbhiqna/image/upload/v1744381808/zxcbqqhhlyl0lki1p9do_pe2jmj.jpg",
 ];
 
 const HoverExpandGallery: React.FC = () => {

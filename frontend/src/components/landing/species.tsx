@@ -39,7 +39,7 @@ const SpeciesOfWeek = () => {
     <div className="bg-white" data-aos="zoom-in-right">
       <div className="max-w-6xl mx-auto p-8 flex items-center flex-col md:flex-row">
         <div className="w-3/4 md:w-1/2 pr-4">
-          <img src={species?.imageUrl || "fly.svg"} alt={species?.title || "Butterfly or Moth"} className="rounded-lg" />
+          <img src={species?.imageUrl || "fly.svg"} alt={species?.title || "Species of the Week"} className="rounded-lg" />
         </div>
         <div className="w-full md:w-1/2 px-auto mt-8 text-center md:text-left">
           <h3 className="text-2xl font-bold text-[#569343] mb-2">Species of the Week</h3>
