@@ -66,7 +66,7 @@ const Contact = () => {
       <div 
         className="min-h-[400px] lg:min-h-[650px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./contactimage.svg")',
+          backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744380988/conatct_banner_f5zauq.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

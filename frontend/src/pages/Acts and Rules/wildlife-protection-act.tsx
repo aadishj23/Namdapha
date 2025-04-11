@@ -15,7 +15,7 @@ function WildlifeProtectionAct() {
         <div 
           className="min-h-[600px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./flowerbanner.png")',
+            backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744381313/flowerbanner_zjgdiw.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
