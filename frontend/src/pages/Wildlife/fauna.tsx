@@ -55,7 +55,7 @@ const Fauna = () => {
       <div 
         className="min-h-[600px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./banners/fauna_banner.png")',
+          backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379543/fauna_banner_mfv9lc.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

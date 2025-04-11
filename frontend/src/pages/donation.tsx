@@ -14,9 +14,9 @@ function Donation() {
     <div className="min-h-screen bg-[#F5F1EE] pb-20" data-aos='zoom-out'>
       {/* Hero Section */}
       <div 
-        className="min-h-[600px] relative flex items-center justify-center"
+        className="min-h-[650px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./banners/support_banner.png")',
+          backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379544/support_banner_fkg2jw.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

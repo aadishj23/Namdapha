@@ -94,8 +94,8 @@ const Contact = () => {
               <MailIcon className="w-6 h-6 text-green-700" />
               <div>
                 <h3 className="font-semibold text-lg">Email Us</h3>
-                <a href="mailto:frnamdapha@gmail.com" className="text-green-700 hover:underline">
-                  frnamdapha@gmail.com
+                <a href="mailto:fdnamdapha@gmail.com" className="text-green-700 hover:underline">
+                  fdnamdapha@gmail.com
                 </a>
               </div>
             </div>

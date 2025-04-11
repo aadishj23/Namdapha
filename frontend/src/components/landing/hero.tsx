@@ -4,9 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css"; 
 
 const images=[
-  './hero_banner/hero1.png',
-  './hero_banner/hero2.png',
-  './hero_banner/hero3.png',
+  'https://res.cloudinary.com/dedbhiqna/image/upload/v1744379375/hero1_nthwrd.png',
+  'https://res.cloudinary.com/dedbhiqna/image/upload/v1744379375/hero2_pnuw9n.png',
+  'https://res.cloudinary.com/dedbhiqna/image/upload/v1744379374/hero3_gqtemm.png',
 ]
 
 const HeroSection = () => {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -72,7 +73,9 @@ const HoverExpandGallery: React.FC = () => {
         </motion.div>
       ))}
     </div>
-    <button className="bg-[#F1AA39] mx-auto block rounded-xl px-4 py-1"> View More</button>
+      <Link to='/gallery'>
+        <button className="bg-[#F1AA39] mx-auto block rounded-xl px-4 py-1"> View More</button>
+      </Link>
     </div>
   );
 };

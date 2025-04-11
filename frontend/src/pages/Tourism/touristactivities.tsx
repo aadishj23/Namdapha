@@ -13,9 +13,9 @@ function TouristActivities() {
       <div className="min-h-screen bg-[#F5F1EE]" data-aos='zoom-out'>
         {/* Hero Section */}
         <div 
-          className="min-h-[600px] relative flex items-center justify-center"
+          className="min-h-[650px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./banners/tourism_activities_banner.png")',
+            backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379545/tourism_activities_banner_zmpkfp.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

@@ -83,7 +83,7 @@ const Gallery: React.FC = () => {
       <div
         className="min-h-[600px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./banners/Gallery_banner.png")',
+          backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379545/Gallery_banner_wbqdkb.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

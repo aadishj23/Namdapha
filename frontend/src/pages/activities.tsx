@@ -14,7 +14,7 @@ function Activities() {
         <div 
           className="min-h-[700px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./banners/Activities_banner.png")',
+            backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379542/Activities_banner_agkfyt.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

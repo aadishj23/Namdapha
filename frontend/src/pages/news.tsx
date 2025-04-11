@@ -55,7 +55,7 @@ const News = () => {
       <div
         className="min-h-[600px] relative flex items-center justify-center"
         style={{
-          backgroundImage: 'url("./banners/news_banner.png")',
+          backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379544/news_banner_ledd2w.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

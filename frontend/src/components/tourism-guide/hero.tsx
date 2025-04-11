@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 min-h-[900px] "
         style={{
-          backgroundImage: `url('./banners/tourism_banner.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/dedbhiqna/image/upload/v1744379546/tourism_banner_ek78gy.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

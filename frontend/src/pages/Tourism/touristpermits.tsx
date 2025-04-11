@@ -13,9 +13,9 @@ function TouristPermits() {
       <div className="min-h-screen bg-[#F5F1EE] pb-10" data-aos='zoom-out'>
         {/* Hero Section */}
         <div 
-          className="min-h-[600px] relative flex items-center justify-center"
+          className="min-h-[640px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./banners/permits_banner.png")',
+            backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379544/permits_banner_ucmfpn.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -31,10 +31,10 @@ function TouristPermits() {
         <div className="mx-5 md:mx-10 mt-5">
           <h1 className="font-bold text-2xl">Permits for entering Arunachal Pradesh</h1>
           <div className="bg-white rounded-2xl px-5 py-5 md:px-10 md:py-8 mt-5">
-            <p><b>Indian Nationals:</b> Since the park is located in a sensitive region near the India-Myanmar border, Indian Nationals outside from Arunachal Pradesh will need a special Inner-Line Permit (ILP) to visit Arunachal Pradesh. These can be obtained online through https://eilp.arunachal.gov.in/ portal or through a registered tour operator.</p>
+            <p><b>Indian Nationals:</b> Since the park is located in a sensitive region near the India-Myanmar border, Indian Nationals outside from Arunachal Pradesh will need a special <span className="text-[#F3454F] font-semibold">Inner-Line Permit (ILP) to visit Arunachal Pradesh. These can be obtained online through <a href="https://eilp.arunachal.gov.in/">https://eilp.arunachal.gov.in/</a></span> portal or through a registered tour operator.</p>
             <br />
             <p><b>Foreigners: PAP ( Protected Area Permit) For Foreign Tourist</b></p>
-            <p>Foreign tourists in a group of 2 or more persons can obtain PAP online by visiting https://indianfrro.gov.in/eservices/home.jsp for a period of 30 days.</p>
+            <p>Foreign tourists in a group of 2 or more persons can obtain PAP online by visiting <a href="https://indianfrro.gov.in/eservices/home.jsp">https://indianfrro.gov.in/eservices/home.jsp</a> for a period of 30 days.</p>
             <div className="flex flex-col md:flex-row gap-4 md:gap-10 mt-10">
               <div className="flex flex-col gap-4">
                 <div className="flex gap-3 items-start flex-1">

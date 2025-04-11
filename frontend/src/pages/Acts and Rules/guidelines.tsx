@@ -13,9 +13,9 @@ function Guidelines() {
       <div className="min-h-screen bg-[#F5F1EE]" data-aos='zoom-out'>
         {/* Hero Section */}
         <div 
-          className="min-h-[600px] relative flex items-center justify-center"
+          className="min-h-[640px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./banners/do_banner.png")',
+            backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379543/do_banner_hkhwxc.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

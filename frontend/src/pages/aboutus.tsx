@@ -15,7 +15,7 @@ function AboutUs() {
         <div 
           className="min-h-[600px] relative flex items-center justify-center"
           style={{
-            backgroundImage: 'url("./banners/aboutus_banner.png")',
+            backgroundImage: 'url("https://res.cloudinary.com/dedbhiqna/image/upload/v1744379543/aboutus_banner_b3kvnf.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -93,7 +93,7 @@ function AboutUs() {
             <img src="./AboutUS/2.png" alt="Activity 1" className="w-full md:w-[480px] md:h-[320px] rounded-2xl object-cover"/>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-0 md:px-10">
               <h1 className="text-[#569343] font-semibold text-2xl mb-3">Management Objectives</h1>
-              <p className="mb-3 text-[#535353]">For providing total protection to Namdapha to ensure maintenance of minimum viable population of Tiger for Scientific, Aesthetic, Cultural & Ecological values.</p>
+              <p className="mb-3 text-[#535353]">For providing total protection to Namdapha to ensure maintenance of viable population of Tiger for Scientific, Aesthetic, Cultural & Ecological values.</p>
               <p className="mb-3 text-[#535353]">To Conserve Biodiversity of the Park as National heritage, to ensure Scientific management of the Park & also for Educational &Scientific purposes.</p>
               <p className="text-[#535353]">To develop suitable package for Eco-Development for educating the people of the Fringe area in order to inculcate the concept of eco-conservation and also to develop Eco-tourism within the Buffer Zone.</p>
             </div>
