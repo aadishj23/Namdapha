@@ -58,7 +58,7 @@ const Navbar = () => {
     <nav className="w-full bg-transparent absolute text-white z-[100] px-4 pt-4">
       {/* Action Buttons */}
       <div className="flex md:justify-end justify-between space-x-4">
-        <a href="mailto:frnamdapha@gmail.com" onClick={closeMenu}>
+        <a href="mailto:fdnamdapha@gmail.com" onClick={closeMenu}>
           <button className="bg-yellow-500 hover:bg-yellow-600 px-4 py-2 rounded">Mail Us</button>
         </a>
         <Link to='/donation' onClick={closeMenu}>
