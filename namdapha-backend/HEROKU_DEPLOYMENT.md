@@ -32,30 +32,35 @@ heroku create
 
 ### 3. Set Environment Variables
 
-Set the required environment variables in Heroku:
+Set the required environment variables in Heroku. Replace `your-app-name` with your actual Heroku app name:
 
 ```bash
 # MongoDB URI (replace with your actual MongoDB connection string)
-heroku config:set MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/?retryWrites=true&w=majority"
+heroku config:set MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/?retryWrites=true&w=majority" --app your-app-name
 
 # MongoDB Database name
-heroku config:set MONGODB_DATABASE="namdaphaDB"
+heroku config:set MONGODB_DATABASE="namdaphaDB" --app your-app-name
 
 # Mail configuration
-heroku config:set MAIL_HOST="smtp.gmail.com"
-heroku config:set MAIL_PORT="587"
-heroku config:set MAIL_USERNAME="your-email@gmail.com"
-heroku config:set MAIL_PASSWORD="your-app-password"
+heroku config:set MAIL_HOST="smtp.gmail.com" --app your-app-name
+heroku config:set MAIL_PORT="587" --app your-app-name
+heroku config:set MAIL_USERNAME="your-email@gmail.com" --app your-app-name
+heroku config:set MAIL_PASSWORD="your-app-password" --app your-app-name
+
+# Admin email
+heroku config:set ADMIN_EMAIL="your-admin-email@gmail.com" --app your-app-name
 ```
 
-**Note:** For Gmail, you'll need to use an App Password, not your regular password. Enable 2-factor authentication and generate an app password in your Google Account settings.
+**Note:** 
+- If you're already in a git repository with Heroku remote configured, you can omit the `--app` flag as Heroku will detect it automatically.
+- For Gmail, you'll need to use an App Password, not your regular password. Enable 2-factor authentication and generate an app password in your Google Account settings.
 
 ### 4. Add MongoDB Add-on (Optional but Recommended)
 
 If you want to use Heroku's MongoDB add-on:
 
 ```bash
-heroku addons:create mongolab:sandbox
+heroku addons:create mongolab:sandbox --app your-app-name
 ```
 
 This will automatically set the `MONGODB_URI` environment variable.
@@ -135,7 +140,7 @@ git push heroku main
 
 - `heroku logs --tail` - View real-time logs
 - `heroku config` - View all environment variables
-- `heroku config:set KEY=value` - Set an environment variable
+- `heroku config:set KEY=value --app your-app-name` - Set an environment variable
 - `heroku config:unset KEY` - Remove an environment variable
 - `heroku restart` - Restart your app
 - `heroku ps:scale web=1` - Scale your app

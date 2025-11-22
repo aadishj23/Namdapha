@@ -4,6 +4,7 @@ import com.example.namdapha_backend.Model.Admin;
 import com.example.namdapha_backend.Repository.AdminRepository;
 import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -22,11 +23,14 @@ public class AdminService {
     @Autowired
     private EmailService emailService ;
 
+    @Value("${ADMIN_EMAIL}")
+    private String adminEmail;
+
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder() ;
     private String otpCode ;
 
     public Admin registerAdmin(String email,String password){
-        if(!email.equals("parthnepalia03@gmail.com")){
+        if(!email.equals(adminEmail)){
             throw new RuntimeException("Wrong email for admin") ;
         }
         Admin admin = Admin.builder()
@@ -38,7 +42,7 @@ public class AdminService {
 
     public String login(String email,String password){
 
-        if (!email.equals("parthnepalia03@gmail.com")) {
+        if (!email.equals(adminEmail)) {
             throw new RuntimeException("Login is allowed only for the admin account.");
         }
 
@@ -64,7 +68,7 @@ public class AdminService {
     }
 
     public void resetPassword(String email,String otp,String newPassword){
-        if (!email.equals("parthnepalia03@gmail.com")) {
+        if (!email.equals(adminEmail)) {
             throw new RuntimeException("Password reset is allowed only for the admin email address.");
         }
 
