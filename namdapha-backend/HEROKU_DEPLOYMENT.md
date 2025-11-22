@@ -67,19 +67,26 @@ This will automatically set the `MONGODB_URI` environment variable.
 
 ### 5. Deploy to Heroku
 
+Since your project has both `frontend` and `namdapha-backend` directories, you need to use `git subtree` to push only the backend directory to Heroku.
+
 Make sure your code is committed to git, then deploy:
 
 ```bash
-git init  # if not already a git repository
+# If not already a git repository
+git init
 git add .
 git commit -m "Initial commit for Heroku deployment"
-git push heroku main
+
+# Deploy using git subtree (pushes only namdapha-backend directory)
+git subtree push --prefix namdapha-backend heroku main
 ```
 
 If your default branch is `master` instead of `main`:
 ```bash
-git push heroku master
+git subtree push --prefix namdapha-backend heroku master
 ```
+
+**Note:** The `git subtree` command ensures that only the `namdapha-backend` directory (which contains `pom.xml`) is pushed to Heroku, allowing it to detect the Java buildpack correctly.
 
 ### 6. Verify Deployment
 
@@ -133,16 +140,30 @@ After making changes:
 ```bash
 git add .
 git commit -m "Your commit message"
-git push heroku main
+git subtree push --prefix namdapha-backend heroku main
 ```
+
+## Automatic Restart Behavior
+
+Heroku automatically restarts your app in the following scenarios:
+
+1. **After Deployment**: Every time you push new code, Heroku restarts the app
+2. **After Config Var Changes**: When you set/unset environment variables, the app restarts
+3. **After Dyno Crashes**: If the app crashes, Heroku automatically attempts to restart it
+4. **After Dyno Restart**: Heroku may restart dynos for maintenance or updates
+5. **Manual Restart**: You can manually restart using `heroku restart --app your-app-name`
+
+**Note**: If your app crashes repeatedly (crashes more than 5 times in 5 minutes), Heroku will put it in "crashed" state and stop trying to restart it automatically. You'll need to manually restart it or fix the underlying issue.
 
 ## Useful Heroku Commands
 
 - `heroku logs --tail` - View real-time logs
+- `heroku logs --tail --num 100` - View last 100 log lines
 - `heroku config` - View all environment variables
 - `heroku config:set KEY=value --app your-app-name` - Set an environment variable
 - `heroku config:unset KEY` - Remove an environment variable
-- `heroku restart` - Restart your app
-- `heroku ps:scale web=1` - Scale your app
-- `heroku open` - Open your app in browser
+- `heroku restart --app your-app-name` - Manually restart your app
+- `heroku ps --app your-app-name` - Check app status and dyno state
+- `heroku ps:scale web=1 --app your-app-name` - Scale your app
+- `heroku open --app your-app-name` - Open your app in browser
 
